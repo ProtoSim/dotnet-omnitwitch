@@ -1,0 +1,10 @@
+D:\Local\NuGet\netstandard2.1\ProtoSim.OmniTwitch.deps.json
+D:\Local\NuGet\netstandard2.1\ProtoSim.OmniTwitch.dll
+D:\Local\NuGet\netstandard2.1\ProtoSim.OmniTwitch.pdb
+D:\Local\NuGet\netstandard2.1\ProtoSim.OmniTwitch.xml
+C:\Users\roman\source\repos\ProtoSim.OmniTwitch\ProtoSim.OmniTwitch\obj\Debug\netstandard2.1\ProtoSim.OmniTwitch.csprojAssemblyReference.cache
+C:\Users\roman\source\repos\ProtoSim.OmniTwitch\ProtoSim.OmniTwitch\obj\Debug\netstandard2.1\ProtoSim.OmniTwitch.AssemblyInfoInputs.cache
+C:\Users\roman\source\repos\ProtoSim.OmniTwitch\ProtoSim.OmniTwitch\obj\Debug\netstandard2.1\ProtoSim.OmniTwitch.AssemblyInfo.cs
+C:\Users\roman\source\repos\ProtoSim.OmniTwitch\ProtoSim.OmniTwitch\obj\Debug\netstandard2.1\ProtoSim.OmniTwitch.csproj.CoreCompileInputs.cache
+C:\Users\roman\source\repos\ProtoSim.OmniTwitch\ProtoSim.OmniTwitch\obj\Debug\netstandard2.1\ProtoSim.OmniTwitch.dll
+C:\Users\roman\source\repos\ProtoSim.OmniTwitch\ProtoSim.OmniTwitch\obj\Debug\netstandard2.1\ProtoSim.OmniTwitch.pdb

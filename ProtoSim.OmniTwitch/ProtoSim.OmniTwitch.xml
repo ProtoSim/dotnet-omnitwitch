@@ -1,0 +1,512 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ProtoSim.OmniTwitch</name>
+    </assembly>
+    <members>
+        <member name="T:ProtoSim.OmniTwitch.ChatClient">
+            <summary>
+            Provides a set of methods and events to interact with the Twitch IRC service.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.ChatClient.OnConnected">
+            <summary>
+            Occurs when the client connects.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.ChatClient.OnDisconnected">
+            <summary>
+            Occurs when the client disconnects.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.ChatClient.OnClientJoined">
+            <summary>
+            Occurs when the client joins a channel.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.ChatClient.OnClientParted">
+            <summary>
+            Occurs when the client parts a channel.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.ChatClient.OnUserJoined">
+            <summary>
+            Occurs when a user joins a channel the client is in.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.ChatClient.OnUserParted">
+            <summary>
+            Occurs when a user parts a channel the client is in.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.ChatClient.OnChatMessage">
+            <summary>
+            Occurs when a user sends a message to a channel the client is in.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.ChatClient.OnChatCommand">
+            <summary>
+            Occurs when a user sends a command message to a channel the client is in.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.ChatClient.Nickname">
+            <summary>
+            Gets the nickname used by the client.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.ChatClient.Token">
+            <summary>
+            Gets the token used by the client.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.ChatClient.CommandIdentifier">
+            <summary>
+            Gets or sets the command identifier recognized by the client.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.ChatClient.IsConnected">
+            <summary>
+            Gets a boolean value indicating whether the client is connected.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.ChatClient.LastMessageSent">
+            <summary>
+            Gets the last message sent by the client.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.ChatClient.Channels">
+            <summary>
+            Gets a list of channel names the client is in.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.ChatClient.Users">
+            <summary>
+            Gets a list of usernames in the channels the client is in.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.ChatClient.#ctor(System.String,System.String,System.Nullable{System.Char})">
+            <summary>
+            Initializes a new instance of the ChatClient class, and sets the properties to the specified values.
+            </summary>
+            <param name="nickname">The nickname to use.</param>
+            <param name="token">The token to use.</param>
+            <param name="commandIdentifier">The command identifier character; default is '!'.</param>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.ChatClient.Connect">
+            <summary>
+            Connects the client socket and starts raising events.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.ChatClient.Disconnect">
+            <summary>
+            Disconnects the client socket and stops raising events.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.ChatClient.JoinChannel(System.String)">
+            <summary>
+            Joins the client to the specified channel.
+            </summary>
+            <param name="channelName">The name of the channel.</param>
+            <returns>False if error.</returns>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.ChatClient.JoinChannels(System.Collections.Generic.List{System.String})">
+            <summary>
+            Joins the client to the specified channels.
+            </summary>
+            <param name="channelNames">The names of the channels.</param>
+            <returns>False if error.</returns>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.ChatClient.PartChannel(System.String)">
+            <summary>
+            Parts the client from the specified channel.
+            </summary>
+            <param name="channelName">The name of the channel.</param>
+            <returns>False if error.</returns>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.ChatClient.PartChannels(System.Collections.Generic.List{System.String})">
+            <summary>
+            Parts the client from the specified channels.
+            </summary>
+            <param name="channelNames">The names of the channels.</param>
+            <returns>False if error.</returns>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.ChatClient.SendMessage(System.String,System.String)">
+            <summary>
+            Sends the specified text as a message.
+            </summary>
+            <param name="text">The message text.</param>
+            <param name="channelName">The name of the channel; default: sole connected channel.</param>
+            <returns>False if error</returns>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.ChatClient.SendWhisper(System.String,System.String,System.String)">
+            <summary>
+            Sends the specified text as a whisper to the specified user.
+            </summary>
+            <param name="username">The name of the user.</param>
+            <param name="message">The whisper text.</param>
+            <param name="channelName">The name of the channel; default: sole connected channel.</param>
+            <returns>False if error</returns>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.ChatClient.BanUser(System.String,System.String)">
+            <summary>
+            Bans the specified user.
+            </summary>
+            <param name="username">The name of the user.</param>
+            <param name="channelName">The name of the channel; default: sole connected channel.</param>
+            <returns>False if error.</returns>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.ChatClient.UnbanUser(System.String,System.String)">
+            <summary>
+            Unbans the specified user.
+            </summary>
+            <param name="username">The name of the user.</param>
+            <param name="channelName">The name of the channel; default: sole connected channel.</param>
+            <returns>False if error.</returns>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.ChatClient.ClearChat(System.String)">
+            <summary>
+            Clears the chat.
+            </summary>
+            <param name="channelName">The name of the channel; default: sole connected channel.</param>
+            <returns>False if error.</returns>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.ChatClient.EnableEmoteOnly(System.String)">
+            <summary>
+            Enables emote only mode.
+            </summary>
+            <param name="channelName">The name of the channel; default: sole connected channel.</param>
+            <returns>False if error.</returns>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.ChatClient.DisableEmoteOnly(System.String)">
+            <summary>
+            Disables emote only mode.
+            </summary>
+            <param name="channelName">The name of the channel; default: sole connected channel.</param>
+            <returns>False if error.</returns>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.ChatClient.HostChannel(System.String,System.String)">
+            <summary>
+            Initiates a host for the specified channel.
+            </summary>
+            <param name="channel">The name of the channel to host.</param>
+            <param name="channelName">The name of the channel to host from; default: sole connected channel.</param>
+            <returns>False if error.</returns>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.ChatClient.UnhostChannel(System.String,System.String)">
+            <summary>
+            Cancels a host for the specified channel.
+            </summary>
+            <param name="channel">The name of the channel to unhost.</param>
+            <param name="channelName">The name of the channel to unhost from; default: sole connected channel.</param>
+            <returns>False if error.</returns>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.ChatClient.AddStreamMarker(System.String,System.String)">
+            <summary>
+            Adds a stream marker with the specified description.
+            </summary>
+            <param name="description">The description text.</param>
+            <param name="channelName">The name of the channel; default: sole connected channel.</param>
+            <returns>False if error.</returns>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.ChatClient.ModUser(System.String,System.String)">
+            <summary>
+            Adds the specified user as a moderator.
+            </summary>
+            <param name="username">The name of the user.</param>
+            <param name="channelName">The name of the channel; default: sole connected channel.</param>
+            <returns>False if error.</returns>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.ChatClient.UnmodUser(System.String,System.String)">
+            <summary>
+            Removes the specified user as a moderator.
+            </summary>
+            <param name="username">The name of the user.</param>
+            <param name="channelName">The name of the channel; default: sole connected channel.</param>
+            <returns>False if error.</returns>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.ChatClient.ListMods(System.String)">
+            <summary>
+            List the moderators.
+            </summary>
+            <param name="channelName">The name of the channel; default: sole connected channel.</param>
+            <returns>False if error.</returns>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.ChatClient.RaidChannel(System.String,System.String)">
+            <summary>
+            Initiates a raid for the specified channel.
+            </summary>
+            <param name="channel">The name of the channel to raid.</param>
+            <param name="channelName">The name of the channel to raid from; default: sole connected channel.</param>
+            <returns>False if error.</returns>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.ChatClient.CancelRaid(System.String)">
+            <summary>
+            Cancels a raid.
+            </summary>
+            <param name="channelName">The name of the channel; default: sole connected channel.</param>
+            <returns>False if error.</returns>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.ChatClient.EnableSlowMode(System.Int32,System.String)">
+            <summary>
+            Enables slow mode for the specified time.
+            </summary>
+            <param name="seconds">The amount of time in seconds; default: 60.</param>
+            <param name="channelName">The name of the channel; default: sole connected channel.</param>
+            <returns>False if error.</returns>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.ChatClient.DisableSlowMode(System.String)">
+            <summary>
+            Disables slow mode.
+            </summary>
+            <param name="channelName">The name of the channel; default: sole connected channel.</param>
+            <returns>False if error.</returns>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.ChatClient.EnableSubscribersOnly(System.String)">
+            <summary>
+            Enables subscriber only mode.
+            </summary>
+            <param name="channelName">The name of the channel; default: sole connected channel.</param>
+            <returns>False if error.</returns>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.ChatClient.DisableSubscribersOnly(System.String)">
+            <summary>
+            Disables subscriber only mode.
+            </summary>
+            <param name="channelName">The name of the channel; default: sole connected channel.</param>
+            <returns>False if error.</returns>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.ChatClient.TimeoutUser(System.String,System.Int32,System.String)">
+            <summary>
+            Times out the specified user.
+            </summary>
+            <param name="username">The name of the user.</param>
+            <param name="seconds">The amount of time in seconds; default: 600.</param>
+            <param name="channelName">The name of the channel; default: sole connected channel.</param>
+            <returns>False if error.</returns>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.ChatClient.UntimeoutUser(System.String,System.String)">
+            <summary>
+            Untimes out the specified user.
+            </summary>
+            <param name="username">The name of the user.</param>
+            <param name="channelName">The name of the channel; default: sole connected channel.</param>
+            <returns>False if error.</returns>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.ChatClient.VIPUser(System.String,System.String)">
+            <summary>
+            Adds the specified user as a VIP.
+            </summary>
+            <param name="username">The name of the user.</param>
+            <param name="channelName">The name of the channel; default: sole connected channel.</param>
+            <returns>False if error.</returns>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.ChatClient.ListVIPs(System.String)">
+            <summary>
+            List the VIPs
+            </summary>
+            <param name="channelName">The name of the channel; default: sole connected channel.</param>
+            <returns>False if error.</returns>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.ChatClient.Dispose(System.Boolean)">
+            <summary>
+            Disposes the client socket
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.ChatClient.Dispose">
+            <summary>
+            Initiates the client disposal.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.ChatCommandArgs">
+            <summary>
+            Provides a set of parameters related to a chat command event.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.ChatCommandArgs.ChannelName">
+            <summary>
+            Gets the name of the channel.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.ChatCommandArgs.ChannelId">
+            <summary>
+            Gets the Id of the channel.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.ChatCommandArgs.Username">
+            <summary>
+            Gets the name of the user.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.ChatCommandArgs.UserDisplayName">
+            <summary>
+            Gets the display name of the user.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.ChatCommandArgs.UserId">
+            <summary>
+            Gets the Id of the user.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.ChatCommandArgs.UserColorHex">
+            <summary>
+            Gets the hex color for the user.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.ChatCommandArgs.IsSubscriber">
+            <summary>
+            Gets a boolean value indicating whether the user is a subscriber.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.ChatCommandArgs.IsModerator">
+            <summary>
+            Gets a boolean value indicating whether the user is a moderator.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.ChatCommandArgs.IsBroadcaster">
+            <summary>
+            Gets a boolean value indicating whether the user is the broadcaster.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.ChatCommandArgs.MessageId">
+            <summary>
+            Gets the message Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.ChatCommandArgs.Message">
+            <summary>
+            Gets the message text.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.ChatCommandArgs.Command">
+            <summary>
+            Gets the command text.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.ChatCommandArgs.Parameters">
+            <summary>
+            Gets the command parameter list.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.ChatMessageArgs">
+            <summary>
+            Provides a set of parameters related to a chat command event.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.ChatMessageArgs.ChannelName">
+            <summary>
+            Gets the name of the channel.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.ChatMessageArgs.ChannelId">
+            <summary>
+            Gets the Id of the channel.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.ChatMessageArgs.Username">
+            <summary>
+            Gets the name of the user.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.ChatMessageArgs.UserDisplayName">
+            <summary>
+            Gets the display name of the user.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.ChatMessageArgs.UserId">
+            <summary>
+            Gets the Id of the user.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.ChatMessageArgs.UserColorHex">
+            <summary>
+            Gets the hex color for the user.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.ChatMessageArgs.IsSubscriber">
+            <summary>
+            Gets a boolean value indicating whether the user is a subscriber.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.ChatMessageArgs.IsModerator">
+            <summary>
+            Gets a boolean value indicating whether the user is a moderator.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.ChatMessageArgs.IsBroadcaster">
+            <summary>
+            Gets a boolean value indicating whether the user is the broadcaster.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.ChatMessageArgs.MessageId">
+            <summary>
+            Gets the message Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.ChatMessageArgs.Message">
+            <summary>
+            Gets the message text.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.ClientConnectedArgs">
+            <summary>
+            Provides a set of parameters related to a client connect event.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.ClientDisconnectedArgs">
+            <summary>
+            Provides a set of parameters related to a client disconnect event.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.ClientJoinedArgs">
+            <summary>
+            Provides a set of parameters related to a client join event.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.ClientJoinedArgs.ChannelName">
+            <summary>
+            Gets the name of the channel.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.ClientPartedArgs">
+            <summary>
+            Provides a set of parameters related to a client part event.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.ClientPartedArgs.ChannelName">
+            <summary>
+            Gets the name of the channel.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.UserJoinedArgs">
+            <summary>
+            Provides a set of parameters related to a user join event.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.UserJoinedArgs.ChannelName">
+            <summary>
+            Gets the name of the channel.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.UserJoinedArgs.Username">
+            <summary>
+            Gets the name of the user.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.UserPartedArgs">
+            <summary>
+            Provides a set of parameters related to a user part event.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.UserPartedArgs.ChannelName">
+            <summary>
+            Gets the name of the channel.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.UserPartedArgs.Username">
+            <summary>
+            Gets the name of the user.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "nEXfk8dt3YhiotfWL9Zm/K8P9bEali3O1QKGDOPBZLlFOdk1TacxFNVIEm33ns2gzhr8CfRqzc5PGKmhyDvWUg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\roman\\source\\repos\\ProtoSim.OmniTwitch\\ProtoSim.OmniTwitch\\ProtoSim.OmniTwitch.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\roman\\.nuget\\packages\\websocketsharp.core\\1.0.0\\websocketsharp.core.1.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

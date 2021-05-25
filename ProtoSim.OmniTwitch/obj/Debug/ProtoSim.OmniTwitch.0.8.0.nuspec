@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>ProtoSim.OmniTwitch</id>
+    <version>0.8.0</version>
+    <authors>Sebastian Romanet</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A .Net 5.0 class library that provides communication with Twitch via their various APIs and services</description>
+    <repository type="GitHub" />
+    <dependencies>
+      <group targetFramework="net5.0">
+        <dependency id="websocketsharp.core" version="1.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\Local\NuGet\net5.0\ProtoSim.OmniTwitch.dll" target="lib\net5.0\ProtoSim.OmniTwitch.dll" />
+    <file src="D:\Local\NuGet\net5.0\ProtoSim.OmniTwitch.xml" target="lib\net5.0\ProtoSim.OmniTwitch.xml" />
+  </files>
+</package>

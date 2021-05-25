@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProtoSim.OmniTwitch", "ProtoSim.OmniTwitch\ProtoSim.OmniTwitch.csproj", "{9FB516FE-921D-4B51-ABE4-EB37452B48FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9FB516FE-921D-4B51-ABE4-EB37452B48FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FB516FE-921D-4B51-ABE4-EB37452B48FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FB516FE-921D-4B51-ABE4-EB37452B48FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FB516FE-921D-4B51-ABE4-EB37452B48FB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E175060C-00E0-4D06-B1AA-E9A26E7FD029}
+	EndGlobalSection
+EndGlobal
