@@ -891,10 +891,8 @@ namespace ProtoSim.OmniTwitch {
         }
 
         private string? GetValidChannelName(string? channelName) {
-            if (_channels.IsEmpty) {
-                LogLine($"Emtpy {nameof(_channels)}", LogLevel.Warn);
+            if (_channels.IsEmpty)
                 return null;
-            }
 
             if (string.IsNullOrEmpty(channelName)) {
                 if (_channels.Count > 1) {
@@ -1023,8 +1021,13 @@ namespace ProtoSim.OmniTwitch {
                                 else
                                     ChatCommand?.Invoke(this, new ChatCommandArgs(channelName, tags.GetValueOrDefault("room-id"), username, tags.GetValueOrDefault("display-name"), tags.GetValueOrDefault("user-id"), tags.GetValueOrDefault("color"), tags.GetValueOrDefault("subscriber")?.Equals("1") ?? tags.GetValueOrDefault("badges")?.Contains("subscriber") ?? false, tags.GetValueOrDefault("mod")?.Equals("1") ?? tags.GetValueOrDefault("user-type")?.Contains("mod") ?? false, username.Equals(channelName), tags.GetValueOrDefault("id"), userMessage, userMessage[1..], null));
                             }
-                            else
-                                ChatMessage?.Invoke(this, new ChatMessageArgs(channelName, tags.GetValueOrDefault("room-id"), username, tags.GetValueOrDefault("display-name"), tags.GetValueOrDefault("user-id"), tags.GetValueOrDefault("color"), tags.GetValueOrDefault("subscriber")?.Equals("1") ?? tags.GetValueOrDefault("badges")?.Contains("subscriber") ?? false, tags.GetValueOrDefault("mod")?.Equals("1") ?? tags.GetValueOrDefault("user-type")?.Contains("mod") ?? false, username.Equals(channelName), tags.GetValueOrDefault("id"), userMessage));
+                            else {
+                                if (username.Equals("soundalerts")) {
+
+                                }
+                                else
+                                    ChatMessage?.Invoke(this, new ChatMessageArgs(channelName, tags.GetValueOrDefault("room-id"), username, tags.GetValueOrDefault("display-name"), tags.GetValueOrDefault("user-id"), tags.GetValueOrDefault("color"), tags.GetValueOrDefault("subscriber")?.Equals("1") ?? tags.GetValueOrDefault("badges")?.Contains("subscriber") ?? false, tags.GetValueOrDefault("mod")?.Equals("1") ?? tags.GetValueOrDefault("user-type")?.Contains("mod") ?? false, username.Equals(channelName), tags.GetValueOrDefault("id"), userMessage));
+                            }
 
                             break;
 
