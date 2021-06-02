@@ -45,6 +45,10 @@ namespace ProtoSim.OmniTwitch {
         /// Occurs when a user sends a command message to a channel the client is in.
         /// </summary>
         public EventHandler<ChatCommandArgs>? ChatCommand;
+        /// <summary>
+        /// Occurs when a user raids a channel the client is in.
+        /// </summary>
+        public EventHandler<RaidArgs>? Raid;
         
         /// <summary>
         /// Gets the nickname used by the client.
@@ -1022,6 +1026,24 @@ namespace ProtoSim.OmniTwitch {
                             else
                                 ChatMessage?.Invoke(this, new ChatMessageArgs(channelName, tags.GetValueOrDefault("room-id"), username, tags.GetValueOrDefault("display-name"), tags.GetValueOrDefault("user-id"), tags.GetValueOrDefault("color"), tags.GetValueOrDefault("subscriber")?.Equals("1") ?? tags.GetValueOrDefault("badges")?.Contains("subscriber") ?? false, tags.GetValueOrDefault("mod")?.Equals("1") ?? tags.GetValueOrDefault("user-type")?.Contains("mod") ?? false, username.Equals(channelName), tags.GetValueOrDefault("id"), userMessage));
 
+                            break;
+
+                        case "USERNOTICE":
+                            if (!tags.TryGetValue("msg-id", out string? msgId)) {
+                                LogLine($"Failed to parse msg-id: {message}", LogLevel.Warn);
+                                break;
+                            }
+
+                            switch (msgId) {
+                                case "raid":
+                                    channelName = message[(message.IndexOf('#') + 1)..];
+                                    Raid?.Invoke(this, new RaidArgs(channelName, tags.GetValueOrDefault("room-id"), username, tags.GetValueOrDefault("display-name"), tags.GetValueOrDefault("user-id"), tags.GetValueOrDefault("color"), tags.GetValueOrDefault("subscriber")?.Equals("1") ?? tags.GetValueOrDefault("badges")?.Contains("subscriber") ?? false, tags.GetValueOrDefault("mod")?.Equals("1") ?? tags.GetValueOrDefault("user-type")?.Contains("mod") ?? false, username.Equals(channelName), Convert.ToInt32(tags.GetValueOrDefault("msg-param-viewerCount") ?? "0")));
+                                    break;
+
+                                default:
+                                    LogLine($"Unhandled msg-id: {msgId}", LogLevel.Warn);
+                                    break;
+                            }
                             break;
 
                         default:

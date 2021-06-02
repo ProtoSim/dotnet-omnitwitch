@@ -9,44 +9,49 @@
             Provides a set of methods and events to interact with the Twitch IRC service.
             </summary>
         </member>
-        <member name="F:ProtoSim.OmniTwitch.ChatClient.OnConnected">
+        <member name="F:ProtoSim.OmniTwitch.ChatClient.Connected">
             <summary>
             Occurs when the client connects.
             </summary>
         </member>
-        <member name="F:ProtoSim.OmniTwitch.ChatClient.OnDisconnected">
+        <member name="F:ProtoSim.OmniTwitch.ChatClient.Disconnected">
             <summary>
             Occurs when the client disconnects.
             </summary>
         </member>
-        <member name="F:ProtoSim.OmniTwitch.ChatClient.OnClientJoined">
+        <member name="F:ProtoSim.OmniTwitch.ChatClient.ClientJoined">
             <summary>
             Occurs when the client joins a channel.
             </summary>
         </member>
-        <member name="F:ProtoSim.OmniTwitch.ChatClient.OnClientParted">
+        <member name="F:ProtoSim.OmniTwitch.ChatClient.ClientParted">
             <summary>
             Occurs when the client parts a channel.
             </summary>
         </member>
-        <member name="F:ProtoSim.OmniTwitch.ChatClient.OnUserJoined">
+        <member name="F:ProtoSim.OmniTwitch.ChatClient.UserJoined">
             <summary>
             Occurs when a user joins a channel the client is in.
             </summary>
         </member>
-        <member name="F:ProtoSim.OmniTwitch.ChatClient.OnUserParted">
+        <member name="F:ProtoSim.OmniTwitch.ChatClient.UserParted">
             <summary>
             Occurs when a user parts a channel the client is in.
             </summary>
         </member>
-        <member name="F:ProtoSim.OmniTwitch.ChatClient.OnChatMessage">
+        <member name="F:ProtoSim.OmniTwitch.ChatClient.ChatMessage">
             <summary>
             Occurs when a user sends a message to a channel the client is in.
             </summary>
         </member>
-        <member name="F:ProtoSim.OmniTwitch.ChatClient.OnChatCommand">
+        <member name="F:ProtoSim.OmniTwitch.ChatClient.ChatCommand">
             <summary>
             Occurs when a user sends a command message to a channel the client is in.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.ChatClient.Raid">
+            <summary>
+            Occurs when a user raids a channel the client is in.
             </summary>
         </member>
         <member name="P:ProtoSim.OmniTwitch.ChatClient.Nickname">
@@ -483,6 +488,61 @@
         <member name="P:ProtoSim.OmniTwitch.ClientPartedArgs.ChannelName">
             <summary>
             Gets the name of the channel.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.RaidArgs">
+            <summary>
+            Provides a set of parameters related to a raid event.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.RaidArgs.ChannelName">
+            <summary>
+            Gets the name of the channel.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.RaidArgs.ChannelId">
+            <summary>
+            Gets the Id of the channel.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.RaidArgs.Username">
+            <summary>
+            Gets the name of the user.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.RaidArgs.UserDisplayName">
+            <summary>
+            Gets the display name of the user.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.RaidArgs.UserId">
+            <summary>
+            Gets the Id of the user.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.RaidArgs.UserColorHex">
+            <summary>
+            Gets the hex color for the user.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.RaidArgs.IsSubscriber">
+            <summary>
+            Gets a boolean value indicating whether the user is a subscriber.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.RaidArgs.IsModerator">
+            <summary>
+            Gets a boolean value indicating whether the user is a moderator.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.RaidArgs.IsBroadcaster">
+            <summary>
+            Gets a boolean value indicating whether the user is the broadcaster.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.RaidArgs.ViewerCount">
+            <summary>
+            Gets an integer value representing the viewer count.
             </summary>
         </member>
         <member name="T:ProtoSim.OmniTwitch.UserJoinedArgs">
