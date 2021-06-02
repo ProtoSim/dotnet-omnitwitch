@@ -91,23 +91,6 @@ namespace ProtoSim.OmniTwitch {
         private readonly ConcurrentDictionary<string, string> _users = new ConcurrentDictionary<string, string>();
         private bool disposedValue;
 
-        [MemberNotNullWhen(true, nameof(socket))]
-        private bool SocketIsReady {
-            get {
-                if (socket == null) {
-                    LogLine($"Null {nameof(socket)}", LogLevel.Error);
-                    return false;
-                }
-
-                if (!socket.IsAlive) {
-                    LogLine("Socket is not connected", LogLevel.Error);
-                    return false;
-                }
-
-                return true;
-            }
-        }
-
         /// <summary>
         /// Initializes a new instance of the ChatClient class, and sets the properties to the specified values.
         /// </summary>
@@ -253,6 +236,15 @@ namespace ProtoSim.OmniTwitch {
             }
 
             return true;
+        }
+
+        /// <summary>
+        /// Gets a boolean value indicating whether the client is in the specified channel.
+        /// </summary>
+        /// <param name="channelName">The channel name</param>
+        /// <returns>True if in channel</returns>
+        public bool IsInChannel(string? channelName = null) {
+            return GetValidChannelName(channelName) != null;
         }
 
         /// <summary>
@@ -875,6 +867,23 @@ namespace ProtoSim.OmniTwitch {
             LogLine("PING not received", LogLevel.Error);
             Disconnect();
             Connect();
+        }
+
+        [MemberNotNullWhen(true, nameof(socket))]
+        private bool SocketIsReady {
+            get {
+                if (socket == null) {
+                    LogLine($"Null {nameof(socket)}", LogLevel.Error);
+                    return false;
+                }
+
+                if (!socket.IsAlive) {
+                    LogLine("Socket is not connected", LogLevel.Error);
+                    return false;
+                }
+
+                return true;
+            }
         }
 
         private string? GetValidChannelName(string? channelName) {

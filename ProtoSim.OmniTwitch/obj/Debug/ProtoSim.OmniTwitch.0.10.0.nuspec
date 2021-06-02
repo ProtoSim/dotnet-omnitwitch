@@ -5,6 +5,8 @@
     <version>0.10.0</version>
     <authors>Sebastian Romanet</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="file">LICENSE.txt</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
     <description>A .NET 5.0 class library that provides communication with Twitch via their various APIs and services</description>
     <repository type="GitHub" url="https://github.com/ProtoSim/dotnet-omnitwitch.git" />
     <dependencies>
@@ -16,5 +18,6 @@
   <files>
     <file src="D:\Local\NuGet\net5.0\ProtoSim.OmniTwitch.dll" target="lib\net5.0\ProtoSim.OmniTwitch.dll" />
     <file src="D:\Local\NuGet\net5.0\ProtoSim.OmniTwitch.xml" target="lib\net5.0\ProtoSim.OmniTwitch.xml" />
+    <file src="C:\Users\roman\source\repos\ProtoSim.OmniTwitch\LICENSE.txt" target="LICENSE.txt" />
   </files>
 </package>
