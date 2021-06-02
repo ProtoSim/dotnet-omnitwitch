@@ -8,7 +8,7 @@
     <Description>A .NET 5.0 class library that provides communication with Twitch via their various APIs and services</Description>
     <RepositoryType>GitHub</RepositoryType>
     <Nullable>enable</Nullable>
-    <Version>0.10.2</Version>
+    <Version>0.10.5</Version>
     <RepositoryUrl>https://github.com/ProtoSim/dotnet-omnitwitch.git</RepositoryUrl>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
   </PropertyGroup>

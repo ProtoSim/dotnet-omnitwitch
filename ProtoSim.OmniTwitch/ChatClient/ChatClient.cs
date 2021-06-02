@@ -49,6 +49,10 @@ namespace ProtoSim.OmniTwitch {
         /// Occurs when a user raids a channel the client is in.
         /// </summary>
         public EventHandler<RaidArgs>? Raid;
+        /// <summary>
+        /// Occurs when a sound alerts event is detected in a channel the client is in.
+        /// </summary>
+        public EventHandler<SoundAlertsDetectedArgs>? SoundAlertsDetection;
         
         /// <summary>
         /// Gets the nickname used by the client.
@@ -1017,16 +1021,66 @@ namespace ProtoSim.OmniTwitch {
 
                             if (userMessage.StartsWith(CommandIdentifier)) {
                                 if (userMessage.Contains(' '))
-                                    ChatCommand?.Invoke(this, new ChatCommandArgs(channelName, tags.GetValueOrDefault("room-id"), username, tags.GetValueOrDefault("display-name"), tags.GetValueOrDefault("user-id"), tags.GetValueOrDefault("color"), tags.GetValueOrDefault("subscriber")?.Equals("1") ?? tags.GetValueOrDefault("badges")?.Contains("subscriber") ?? false, tags.GetValueOrDefault("mod")?.Equals("1") ?? tags.GetValueOrDefault("user-type")?.Contains("mod") ?? false, username.Equals(channelName), tags.GetValueOrDefault("id"), userMessage, userMessage[1..], userMessage[userMessage.IndexOf(' ')..].Split(' ').ToList()));
+                                    ChatCommand?.Invoke(this, new ChatCommandArgs(
+                                        channelName,
+                                        tags.GetValueOrDefault("room-id"),
+                                        username,
+                                        tags.GetValueOrDefault("display-name"),
+                                        tags.GetValueOrDefault("user-id"),
+                                        tags.GetValueOrDefault("color"),
+                                        tags.GetValueOrDefault("subscriber")?.Equals("1") ?? tags.GetValueOrDefault("badges")?.Contains("subscriber") ?? false,
+                                        tags.GetValueOrDefault("mod")?.Equals("1") ?? tags.GetValueOrDefault("user-type")?.Contains("mod") ?? false,
+                                        username.Equals(channelName),
+                                        tags.GetValueOrDefault("id"),
+                                        userMessage,
+                                        userMessage[1..userMessage.IndexOf(' ')],
+                                        userMessage[userMessage.IndexOf(' ')..].Split(' ').ToList()
+                                        ));
                                 else
-                                    ChatCommand?.Invoke(this, new ChatCommandArgs(channelName, tags.GetValueOrDefault("room-id"), username, tags.GetValueOrDefault("display-name"), tags.GetValueOrDefault("user-id"), tags.GetValueOrDefault("color"), tags.GetValueOrDefault("subscriber")?.Equals("1") ?? tags.GetValueOrDefault("badges")?.Contains("subscriber") ?? false, tags.GetValueOrDefault("mod")?.Equals("1") ?? tags.GetValueOrDefault("user-type")?.Contains("mod") ?? false, username.Equals(channelName), tags.GetValueOrDefault("id"), userMessage, userMessage[1..], null));
+                                    ChatCommand?.Invoke(this, new ChatCommandArgs(
+                                        channelName,
+                                        tags.GetValueOrDefault("room-id"),
+                                        username,
+                                        tags.GetValueOrDefault("display-name"),
+                                        tags.GetValueOrDefault("user-id"),
+                                        tags.GetValueOrDefault("color"),
+                                        tags.GetValueOrDefault("subscriber")?.Equals("1") ?? tags.GetValueOrDefault("badges")?.Contains("subscriber") ?? false,
+                                        tags.GetValueOrDefault("mod")?.Equals("1") ?? tags.GetValueOrDefault("user-type")?.Contains("mod") ?? false,
+                                        username.Equals(channelName),
+                                        tags.GetValueOrDefault("id"),
+                                        userMessage,
+                                        userMessage[1..], null
+                                        ));
                             }
                             else {
-                                if (username.Equals("soundalerts")) {
-
-                                }
+                                if (username.Equals("soundalerts"))
+                                    SoundAlertsDetection?.Invoke(this, new SoundAlertsDetectedArgs(
+                                        channelName,
+                                        tags.GetValueOrDefault("room-id"),
+                                        userMessage[0..userMessage.IndexOf(' ')].ToLower(),
+                                        userMessage[0..userMessage.IndexOf(' ')],
+                                        null,
+                                        null,
+                                        false,
+                                        false,
+                                        username.Equals(channelName),
+                                        userMessage[(userMessage.IndexOf(" Bits to play ") + 14)..],
+                                        Convert.ToInt32(userMessage[(userMessage.IndexOf(" used ") + 6)..userMessage.IndexOf(' ', userMessage.IndexOf(" used ") + 6)] ?? "0")
+                                        ));
                                 else
-                                    ChatMessage?.Invoke(this, new ChatMessageArgs(channelName, tags.GetValueOrDefault("room-id"), username, tags.GetValueOrDefault("display-name"), tags.GetValueOrDefault("user-id"), tags.GetValueOrDefault("color"), tags.GetValueOrDefault("subscriber")?.Equals("1") ?? tags.GetValueOrDefault("badges")?.Contains("subscriber") ?? false, tags.GetValueOrDefault("mod")?.Equals("1") ?? tags.GetValueOrDefault("user-type")?.Contains("mod") ?? false, username.Equals(channelName), tags.GetValueOrDefault("id"), userMessage));
+                                    ChatMessage?.Invoke(this, new ChatMessageArgs(
+                                        channelName,
+                                        tags.GetValueOrDefault("room-id"),
+                                        username,
+                                        tags.GetValueOrDefault("display-name"),
+                                        tags.GetValueOrDefault("user-id"),
+                                        tags.GetValueOrDefault("color"),
+                                        tags.GetValueOrDefault("subscriber")?.Equals("1") ?? tags.GetValueOrDefault("badges")?.Contains("subscriber") ?? false,
+                                        tags.GetValueOrDefault("mod")?.Equals("1") ?? tags.GetValueOrDefault("user-type")?.Contains("mod") ?? false,
+                                        username.Equals(channelName),
+                                        tags.GetValueOrDefault("id"),
+                                        userMessage
+                                        ));
                             }
 
                             break;
@@ -1040,7 +1094,17 @@ namespace ProtoSim.OmniTwitch {
                             switch (msgId) {
                                 case "raid":
                                     channelName = message[(message.IndexOf('#') + 1)..];
-                                    Raid?.Invoke(this, new RaidArgs(channelName, tags.GetValueOrDefault("room-id"), username, tags.GetValueOrDefault("display-name"), tags.GetValueOrDefault("user-id"), tags.GetValueOrDefault("color"), tags.GetValueOrDefault("subscriber")?.Equals("1") ?? tags.GetValueOrDefault("badges")?.Contains("subscriber") ?? false, tags.GetValueOrDefault("mod")?.Equals("1") ?? tags.GetValueOrDefault("user-type")?.Contains("mod") ?? false, username.Equals(channelName), Convert.ToInt32(tags.GetValueOrDefault("msg-param-viewerCount") ?? "0")));
+                                    Raid?.Invoke(this, new RaidArgs(
+                                        channelName,
+                                        tags.GetValueOrDefault("room-id"),
+                                        username, tags.GetValueOrDefault("display-name"),
+                                        tags.GetValueOrDefault("user-id"),
+                                        tags.GetValueOrDefault("color"),
+                                        tags.GetValueOrDefault("subscriber")?.Equals("1") ?? tags.GetValueOrDefault("badges")?.Contains("subscriber") ?? false,
+                                        tags.GetValueOrDefault("mod")?.Equals("1") ?? tags.GetValueOrDefault("user-type")?.Contains("mod") ?? false,
+                                        username.Equals(channelName),
+                                        Convert.ToInt32(tags.GetValueOrDefault("msg-param-viewerCount") ?? "0")
+                                        ));
                                     break;
 
                                 default:

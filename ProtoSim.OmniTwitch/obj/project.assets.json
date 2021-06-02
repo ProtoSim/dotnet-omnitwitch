@@ -38,7 +38,7 @@
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
-    "version": "0.10.2",
+    "version": "0.10.5",
     "restore": {
       "projectUniqueName": "C:\\Users\\roman\\source\\repos\\ProtoSim.OmniTwitch\\ProtoSim.OmniTwitch\\ProtoSim.OmniTwitch.csproj",
       "projectName": "ProtoSim.OmniTwitch",

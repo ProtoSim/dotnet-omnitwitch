@@ -16,15 +16,15 @@ namespace ProtoSim.OmniTwitch {
         /// <summary>
         /// Gets the name of the user.
         /// </summary>
-        public string Username { get; } = "soundalerts";
+        public string Username { get; private set; }
         /// <summary>
         /// Gets the display name of the user.
         /// </summary>
-        public string UserDisplayName { get; } = "SoundAlerts";
+        public string UserDisplayName { get; private set; }
         /// <summary>
         /// Gets the Id of the user.
         /// </summary>
-        public string UserId { get; } = null;
+        public string UserId { get; private set; }
         /// <summary>
         /// Gets the hex color for the user.
         /// </summary>
@@ -42,15 +42,15 @@ namespace ProtoSim.OmniTwitch {
         /// </summary>
         public bool IsBroadcaster { get; private set; }
         /// <summary>
-        /// Gets the message Id.
+        /// The name of the sound alert.
         /// </summary>
-        public string MessageId { get; private set; }
+        public string AlertName { get; private set; }
         /// <summary>
-        /// Gets the message text.
+        /// Gets an integer value indicating the number of Bits used.
         /// </summary>
-        public string Message { get; private set; }
+        public int BitsUsed { get; private set; }
 
-        internal ChatMessageArgs(string? channelName, string? channelId, string? userColorHex, bool isSubscriber, bool isModerator, bool isBroadcaster, string? messageId, string? message) {
+        internal SoundAlertsDetectedArgs(string? channelName, string? channelId, string? username, string? userDisplayName, string? userId, string? userColorHex, bool isSubscriber, bool isModerator, bool isBroadcaster, string? alertName, int bitsUsed) {
             ChannelName = channelName ?? string.Empty;
             ChannelId = channelId ?? string.Empty;
             Username = username ?? string.Empty;
@@ -60,8 +60,8 @@ namespace ProtoSim.OmniTwitch {
             IsSubscriber = isSubscriber;
             IsModerator = isModerator;
             IsBroadcaster = isBroadcaster;
-            MessageId = messageId ?? string.Empty;
-            Message = message ?? string.Empty;
+            AlertName = alertName ?? string.Empty;
+            BitsUsed = bitsUsed;
         }
     }
 }
