@@ -130,6 +130,13 @@
             <param name="channelNames">The names of the channels.</param>
             <returns>False if error.</returns>
         </member>
+        <member name="M:ProtoSim.OmniTwitch.ChatClient.IsInChannel(System.String)">
+            <summary>
+            Gets a boolean value indicating whether the client is in the specified channel.
+            </summary>
+            <param name="channelName">The channel name</param>
+            <returns>True if in channel</returns>
+        </member>
         <member name="M:ProtoSim.OmniTwitch.ChatClient.SendMessage(System.String,System.String)">
             <summary>
             Sends the specified text as a message.

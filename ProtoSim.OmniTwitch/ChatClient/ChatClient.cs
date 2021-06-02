@@ -16,35 +16,35 @@ namespace ProtoSim.OmniTwitch {
         /// <summary>
         /// Occurs when the client connects.
         /// </summary>
-        public EventHandler<ClientConnectedArgs>? OnConnected;
+        public EventHandler<ClientConnectedArgs>? Connected;
         /// <summary>
         /// Occurs when the client disconnects.
         /// </summary>
-        public EventHandler<ClientDisconnectedArgs>? OnDisconnected;
+        public EventHandler<ClientDisconnectedArgs>? Disconnected;
         /// <summary>
         /// Occurs when the client joins a channel.
         /// </summary>
-        public EventHandler<ClientJoinedArgs>? OnClientJoined;
+        public EventHandler<ClientJoinedArgs>? ClientJoined;
         /// <summary>
         /// Occurs when the client parts a channel.
         /// </summary>
-        public EventHandler<ClientPartedArgs>? OnClientParted;
+        public EventHandler<ClientPartedArgs>? ClientParted;
         /// <summary>
         /// Occurs when a user joins a channel the client is in.
         /// </summary>
-        public EventHandler<UserJoinedArgs>? OnUserJoined;
+        public EventHandler<UserJoinedArgs>? UserJoined;
         /// <summary>
         /// Occurs when a user parts a channel the client is in.
         /// </summary>
-        public EventHandler<UserPartedArgs>? OnUserParted;
+        public EventHandler<UserPartedArgs>? UserParted;
         /// <summary>
         /// Occurs when a user sends a message to a channel the client is in.
         /// </summary>
-        public EventHandler<ChatMessageArgs>? OnChatMessage;
+        public EventHandler<ChatMessageArgs>? ChatMessage;
         /// <summary>
         /// Occurs when a user sends a command message to a channel the client is in.
         /// </summary>
-        public EventHandler<ChatCommandArgs>? OnChatCommand;
+        public EventHandler<ChatCommandArgs>? ChatCommand;
         
         /// <summary>
         /// Gets the nickname used by the client.
@@ -206,7 +206,7 @@ namespace ProtoSim.OmniTwitch {
 
             socket.Send($"PART #{channelName}");
             _channels.TryRemove(channelName, out _);
-            OnClientParted?.Invoke(this, new ClientPartedArgs(channelName));
+            ClientParted?.Invoke(this, new ClientPartedArgs(channelName));
             return true;
         }
 
@@ -232,7 +232,7 @@ namespace ProtoSim.OmniTwitch {
 
                 socket.Send($"PART #{channelName}");
                 _channels.TryRemove(channelName, out _);
-                OnClientParted?.Invoke(this, new ClientPartedArgs(channelName));
+                ClientParted?.Invoke(this, new ClientPartedArgs(channelName));
             }
 
             return true;
@@ -926,7 +926,7 @@ namespace ProtoSim.OmniTwitch {
 
             if (IsConnected) {
                 IsConnected = false;
-                OnDisconnected?.Invoke(this, new ClientDisconnectedArgs());
+                Disconnected?.Invoke(this, new ClientDisconnectedArgs());
             }
         }
 
@@ -973,7 +973,7 @@ namespace ProtoSim.OmniTwitch {
                 }
                 else if (message.StartsWith(":tmi.twitch.tv CAP * ACK")) {
                     IsConnected = true;
-                    OnConnected?.Invoke(this, new ClientConnectedArgs());
+                    Connected?.Invoke(this, new ClientConnectedArgs());
                 }
                 else if (Regex.IsMatch(message, @"^:\w+!\w+@\w+.tmi.twitch.tv.+")) {
                     var username = message[(message.IndexOf(':') + 1)..message.IndexOf('!')];
@@ -986,11 +986,11 @@ namespace ProtoSim.OmniTwitch {
 
                             if (username.Equals(Nickname)) {
                                 if (_channels.TryAdd(channelName, channelName))
-                                    OnClientJoined?.Invoke(this, new ClientJoinedArgs(channelName));
+                                    ClientJoined?.Invoke(this, new ClientJoinedArgs(channelName));
                             }
                             else {
                                 if (_users.TryAdd($"{username}—{channelName}", $"{username}—{channelName}"))
-                                    OnUserJoined?.Invoke(this, new UserJoinedArgs(channelName, username));
+                                    UserJoined?.Invoke(this, new UserJoinedArgs(channelName, username));
                             }
 
                             break;
@@ -1000,11 +1000,11 @@ namespace ProtoSim.OmniTwitch {
 
                             if (username.Equals(Nickname)) {
                                 _channels.TryRemove(channelName, out _);
-                                OnClientParted?.Invoke(this, new ClientPartedArgs(channelName));
+                                ClientParted?.Invoke(this, new ClientPartedArgs(channelName));
                             }
                             else {
                                 _users.TryRemove($"{username}—{channelName}", out _);
-                                OnUserParted?.Invoke(this, new UserPartedArgs(channelName, username));
+                                UserParted?.Invoke(this, new UserPartedArgs(channelName, username));
                             }
 
                             break;
@@ -1015,12 +1015,12 @@ namespace ProtoSim.OmniTwitch {
 
                             if (userMessage.StartsWith(CommandIdentifier)) {
                                 if (userMessage.Contains(' '))
-                                    OnChatCommand?.Invoke(this, new ChatCommandArgs(channelName, tags.GetValueOrDefault("room-id"), username, tags.GetValueOrDefault("display-name"), tags.GetValueOrDefault("user-id"), tags.GetValueOrDefault("color"), tags.GetValueOrDefault("subscriber")?.Equals("1") ?? tags.GetValueOrDefault("badges")?.Contains("subscriber") ?? false, tags.GetValueOrDefault("mod")?.Equals("1") ?? tags.GetValueOrDefault("user-type")?.Contains("mod") ?? false, username.Equals(channelName), tags.GetValueOrDefault("id"), userMessage, userMessage[1..], userMessage[userMessage.IndexOf(' ')..].Split(' ').ToList()));
+                                    ChatCommand?.Invoke(this, new ChatCommandArgs(channelName, tags.GetValueOrDefault("room-id"), username, tags.GetValueOrDefault("display-name"), tags.GetValueOrDefault("user-id"), tags.GetValueOrDefault("color"), tags.GetValueOrDefault("subscriber")?.Equals("1") ?? tags.GetValueOrDefault("badges")?.Contains("subscriber") ?? false, tags.GetValueOrDefault("mod")?.Equals("1") ?? tags.GetValueOrDefault("user-type")?.Contains("mod") ?? false, username.Equals(channelName), tags.GetValueOrDefault("id"), userMessage, userMessage[1..], userMessage[userMessage.IndexOf(' ')..].Split(' ').ToList()));
                                 else
-                                    OnChatCommand?.Invoke(this, new ChatCommandArgs(channelName, tags.GetValueOrDefault("room-id"), username, tags.GetValueOrDefault("display-name"), tags.GetValueOrDefault("user-id"), tags.GetValueOrDefault("color"), tags.GetValueOrDefault("subscriber")?.Equals("1") ?? tags.GetValueOrDefault("badges")?.Contains("subscriber") ?? false, tags.GetValueOrDefault("mod")?.Equals("1") ?? tags.GetValueOrDefault("user-type")?.Contains("mod") ?? false, username.Equals(channelName), tags.GetValueOrDefault("id"), userMessage, userMessage[1..], null));
+                                    ChatCommand?.Invoke(this, new ChatCommandArgs(channelName, tags.GetValueOrDefault("room-id"), username, tags.GetValueOrDefault("display-name"), tags.GetValueOrDefault("user-id"), tags.GetValueOrDefault("color"), tags.GetValueOrDefault("subscriber")?.Equals("1") ?? tags.GetValueOrDefault("badges")?.Contains("subscriber") ?? false, tags.GetValueOrDefault("mod")?.Equals("1") ?? tags.GetValueOrDefault("user-type")?.Contains("mod") ?? false, username.Equals(channelName), tags.GetValueOrDefault("id"), userMessage, userMessage[1..], null));
                             }
                             else
-                                OnChatMessage?.Invoke(this, new ChatMessageArgs(channelName, tags.GetValueOrDefault("room-id"), username, tags.GetValueOrDefault("display-name"), tags.GetValueOrDefault("user-id"), tags.GetValueOrDefault("color"), tags.GetValueOrDefault("subscriber")?.Equals("1") ?? tags.GetValueOrDefault("badges")?.Contains("subscriber") ?? false, tags.GetValueOrDefault("mod")?.Equals("1") ?? tags.GetValueOrDefault("user-type")?.Contains("mod") ?? false, username.Equals(channelName), tags.GetValueOrDefault("id"), userMessage));
+                                ChatMessage?.Invoke(this, new ChatMessageArgs(channelName, tags.GetValueOrDefault("room-id"), username, tags.GetValueOrDefault("display-name"), tags.GetValueOrDefault("user-id"), tags.GetValueOrDefault("color"), tags.GetValueOrDefault("subscriber")?.Equals("1") ?? tags.GetValueOrDefault("badges")?.Contains("subscriber") ?? false, tags.GetValueOrDefault("mod")?.Equals("1") ?? tags.GetValueOrDefault("user-type")?.Contains("mod") ?? false, username.Equals(channelName), tags.GetValueOrDefault("id"), userMessage));
 
                             break;
 
