@@ -52,7 +52,7 @@ namespace ProtoSim.OmniTwitch {
         /// <summary>
         /// Occurs when a sound alerts event is detected in a channel the client is in.
         /// </summary>
-        public EventHandler<SoundAlertsDetectedArgs>? SoundAlertsDetection;
+        public EventHandler<SoundAlertsDetectedArgs>? SoundAlertsDetected;
         
         /// <summary>
         /// Gets the nickname used by the client.
@@ -1054,7 +1054,7 @@ namespace ProtoSim.OmniTwitch {
                             }
                             else {
                                 if (username.Equals("soundalerts"))
-                                    SoundAlertsDetection?.Invoke(this, new SoundAlertsDetectedArgs(
+                                    SoundAlertsDetected?.Invoke(this, new SoundAlertsDetectedArgs(
                                         channelName,
                                         tags.GetValueOrDefault("room-id"),
                                         userMessage[0..userMessage.IndexOf(' ')].ToLower(),

@@ -54,6 +54,11 @@
             Occurs when a user raids a channel the client is in.
             </summary>
         </member>
+        <member name="F:ProtoSim.OmniTwitch.ChatClient.SoundAlertsDetected">
+            <summary>
+            Occurs when a sound alerts event is detected in a channel the client is in.
+            </summary>
+        </member>
         <member name="P:ProtoSim.OmniTwitch.ChatClient.Nickname">
             <summary>
             Gets the nickname used by the client.
@@ -543,6 +548,66 @@
         <member name="P:ProtoSim.OmniTwitch.RaidArgs.ViewerCount">
             <summary>
             Gets an integer value representing the viewer count.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.SoundAlertsDetectedArgs">
+            <summary>
+            Provides a set of parameters related to a chat command event.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.SoundAlertsDetectedArgs.ChannelName">
+            <summary>
+            Gets the name of the channel.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.SoundAlertsDetectedArgs.ChannelId">
+            <summary>
+            Gets the Id of the channel.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.SoundAlertsDetectedArgs.Username">
+            <summary>
+            Gets the name of the user.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.SoundAlertsDetectedArgs.UserDisplayName">
+            <summary>
+            Gets the display name of the user.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.SoundAlertsDetectedArgs.UserId">
+            <summary>
+            Gets the Id of the user.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.SoundAlertsDetectedArgs.UserColorHex">
+            <summary>
+            Gets the hex color for the user.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.SoundAlertsDetectedArgs.IsSubscriber">
+            <summary>
+            Gets a boolean value indicating whether the user is a subscriber.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.SoundAlertsDetectedArgs.IsModerator">
+            <summary>
+            Gets a boolean value indicating whether the user is a moderator.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.SoundAlertsDetectedArgs.IsBroadcaster">
+            <summary>
+            Gets a boolean value indicating whether the user is the broadcaster.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.SoundAlertsDetectedArgs.AlertName">
+            <summary>
+            The name of the sound alert.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.SoundAlertsDetectedArgs.BitsUsed">
+            <summary>
+            Gets an integer value indicating the number of Bits used.
             </summary>
         </member>
         <member name="T:ProtoSim.OmniTwitch.UserJoinedArgs">
