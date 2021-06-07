@@ -1034,7 +1034,7 @@ namespace ProtoSim.OmniTwitch {
                                         tags.GetValueOrDefault("id"),
                                         userMessage,
                                         userMessage[1..userMessage.IndexOf(' ')],
-                                        userMessage[userMessage.IndexOf(' ')..].Split(' ').ToList()
+                                        userMessage[(userMessage.IndexOf(' ') + 1)..]
                                         ));
                                 else
                                     ChatCommand?.Invoke(this, new ChatCommandArgs(
@@ -1049,7 +1049,8 @@ namespace ProtoSim.OmniTwitch {
                                         username.Equals(channelName),
                                         tags.GetValueOrDefault("id"),
                                         userMessage,
-                                        userMessage[1..], null
+                                        userMessage[1..],
+                                        null
                                         ));
                             }
                             else {

@@ -57,9 +57,13 @@ namespace ProtoSim.OmniTwitch {
         /// <summary>
         /// Gets the command parameter list.
         /// </summary>
-        public List<string> Parameters { get; private set; }
+        public string[] Parameters { get; private set; }
+        /// <summary>
+        /// Gets the command parameter string.
+        /// </summary>
+        public string ParameterString { get; private set; }
 
-        internal ChatCommandArgs(string? channelName, string? channelId, string? username, string? userDisplayName, string? userId, string? userColorHex, bool isSubscriber, bool isModerator, bool isBroadcaster, string? messageId, string? message, string? command, List<string>? parameters) {
+        internal ChatCommandArgs(string? channelName, string? channelId, string? username, string? userDisplayName, string? userId, string? userColorHex, bool isSubscriber, bool isModerator, bool isBroadcaster, string? messageId, string? message, string? command, string? parameterString) {
             ChannelName = channelName ?? string.Empty;
             ChannelId = channelId ?? string.Empty;
             Username = username ?? string.Empty;
@@ -72,7 +76,8 @@ namespace ProtoSim.OmniTwitch {
             MessageId = messageId ?? string.Empty;
             Message = message ?? string.Empty;
             Command = command ?? string.Empty;
-            Parameters = parameters ?? new List<string>();
+            ParameterString = parameterString ?? string.Empty;
+            Parameters = ParameterString.Split(' ');
         }
     }
 }

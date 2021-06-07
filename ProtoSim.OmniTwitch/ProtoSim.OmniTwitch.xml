@@ -405,6 +405,11 @@
             Gets the command parameter list.
             </summary>
         </member>
+        <member name="P:ProtoSim.OmniTwitch.ChatCommandArgs.ParameterString">
+            <summary>
+            Gets the command parameter string.
+            </summary>
+        </member>
         <member name="T:ProtoSim.OmniTwitch.ChatMessageArgs">
             <summary>
             Provides a set of parameters related to a chat command event.
