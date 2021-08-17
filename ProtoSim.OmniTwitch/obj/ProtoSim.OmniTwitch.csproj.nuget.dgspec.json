@@ -5,7 +5,7 @@
   },
   "projects": {
     "C:\\Users\\roman\\source\\repos\\ProtoSim.OmniTwitch\\ProtoSim.OmniTwitch\\ProtoSim.OmniTwitch.csproj": {
-      "version": "0.10.12",
+      "version": "0.10.13.17",
       "restore": {
         "projectUniqueName": "C:\\Users\\roman\\source\\repos\\ProtoSim.OmniTwitch\\ProtoSim.OmniTwitch\\ProtoSim.OmniTwitch.csproj",
         "projectName": "ProtoSim.OmniTwitch",
@@ -15,7 +15,7 @@
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
           "C:\\Users\\roman\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,6 +28,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "D:\\Local\\NuGet": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -47,6 +48,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "websocketsharp.core": {
               "target": "Package",
               "version": "[1.0.0, )"
@@ -67,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

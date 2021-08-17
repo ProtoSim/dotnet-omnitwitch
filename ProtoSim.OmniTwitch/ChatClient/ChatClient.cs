@@ -65,7 +65,7 @@ namespace ProtoSim.OmniTwitch {
         /// <summary>
         /// Gets or sets the command identifier recognized by the client.
         /// </summary>
-        public char CommandIdentifier { get; set; } = '!';
+        public char CommandIdentifier = '!';
         /// <summary>
         /// Gets a boolean value indicating whether the client is connected.
         /// </summary>
@@ -94,7 +94,7 @@ namespace ProtoSim.OmniTwitch {
 
         private WebSocket? socket;
         private static readonly string _socketUrl = "wss://irc-ws.chat.twitch.tv:443";
-        private readonly Timer _timerPing = new Timer(1000 * 60 * 5) { AutoReset = true, Enabled = false };
+        private readonly Timer _timerPing = new Timer(1000 * 60 * 10) { AutoReset = true, Enabled = false };
         private readonly ConcurrentDictionary<string, string> _channels = new ConcurrentDictionary<string, string>();
         private readonly ConcurrentDictionary<string, string> _users = new ConcurrentDictionary<string, string>();
         private bool disposedValue;
@@ -161,7 +161,7 @@ namespace ProtoSim.OmniTwitch {
         /// <returns>False if error.</returns>
         public bool JoinChannel(string? channelName) {
             if (string.IsNullOrEmpty(channelName)) {
-                LogLine($"Null/empty {nameof(channelName)}", LogLevel.Warn);
+                LogLine($"null/empty {nameof(channelName)}", LogLevel.Warn);
                 return false;
             }
 
@@ -188,7 +188,7 @@ namespace ProtoSim.OmniTwitch {
 
             foreach (var channelName in channelNames) {
                 if (string.IsNullOrEmpty(channelName)) {
-                    LogLine($"Null/empty {nameof(channelName)}", LogLevel.Warn);
+                    LogLine($"null/empty {nameof(channelName)}", LogLevel.Warn);
                     continue;
                 }
 
@@ -205,7 +205,7 @@ namespace ProtoSim.OmniTwitch {
         /// <returns>False if error.</returns>
         public bool PartChannel(string? channelName) {
             if (string.IsNullOrEmpty(channelName)) {
-                LogLine($"Null/empty {nameof(channelName)}", LogLevel.Warn);
+                LogLine($"null/empty {nameof(channelName)}", LogLevel.Warn);
                 return false;
             }
 
@@ -234,7 +234,7 @@ namespace ProtoSim.OmniTwitch {
 
             foreach (var channelName in channelNames) {
                 if (string.IsNullOrEmpty(channelName)) {
-                    LogLine($"Null/empty {nameof(channelName)}", LogLevel.Warn);
+                    LogLine($"null/empty {nameof(channelName)}", LogLevel.Warn);
                     continue;
                 }
 
@@ -265,12 +265,12 @@ namespace ProtoSim.OmniTwitch {
             channelName = GetValidChannelName(channelName);
 
             if (string.IsNullOrEmpty(channelName)) {
-                LogLine($"Null/emtpy {nameof(channelName)}", LogLevel.Error);
+                LogLine($"null/empty {nameof(channelName)}", LogLevel.Error);
                 return false;
             }
             
             if (string.IsNullOrEmpty(text)) {
-                LogLine($"Null/emtpy {nameof(text)}", LogLevel.Error);
+                LogLine($"null/empty {nameof(text)}", LogLevel.Error);
                 return false;
             }
 
@@ -299,19 +299,19 @@ namespace ProtoSim.OmniTwitch {
         /// <returns>False if error</returns>
         public bool SendWhisper(string? username, string? message, string? channelName = null) {
             if (string.IsNullOrEmpty(username)) {
-                LogLine($"Null/empty {nameof(username)}", LogLevel.Warn);
+                LogLine($"null/empty {nameof(username)}", LogLevel.Warn);
                 return false;
             }
 
             if (string.IsNullOrEmpty(message)) {
-                LogLine($"Null/empty {nameof(message)}", LogLevel.Warn);
+                LogLine($"null/empty {nameof(message)}", LogLevel.Warn);
                 return false;
             }
 
             channelName = GetValidChannelName(channelName);
 
             if (string.IsNullOrEmpty(channelName)) {
-                LogLine($"Null/emtpy {nameof(channelName)}", LogLevel.Error);
+                LogLine($"null/empty {nameof(channelName)}", LogLevel.Error);
                 return false;
             }
 
@@ -332,14 +332,14 @@ namespace ProtoSim.OmniTwitch {
         /// <returns>False if error.</returns>
         public bool BanUser(string? username, string? channelName = null) {
             if (string.IsNullOrEmpty(username)) {
-                LogLine($"Null/emtpy {nameof(username)}", LogLevel.Warn);
+                LogLine($"null/empty {nameof(username)}", LogLevel.Warn);
                 return false;
             }
 
             channelName = GetValidChannelName(channelName);
 
             if (string.IsNullOrEmpty(channelName)) {
-                LogLine($"Null/emtpy {nameof(channelName)}", LogLevel.Error);
+                LogLine($"null/empty {nameof(channelName)}", LogLevel.Error);
                 return false;
             }
 
@@ -360,14 +360,14 @@ namespace ProtoSim.OmniTwitch {
         /// <returns>False if error.</returns>
         public bool UnbanUser(string? username, string? channelName = null) {
             if (string.IsNullOrEmpty(username)) {
-                LogLine($"Null/emtpy {nameof(username)}", LogLevel.Warn);
+                LogLine($"null/empty {nameof(username)}", LogLevel.Warn);
                 return false;
             }
 
             channelName = GetValidChannelName(channelName);
 
             if (string.IsNullOrEmpty(channelName)) {
-                LogLine($"Null/emtpy {nameof(channelName)}", LogLevel.Error);
+                LogLine($"null/empty {nameof(channelName)}", LogLevel.Error);
                 return false;
             }
 
@@ -389,7 +389,7 @@ namespace ProtoSim.OmniTwitch {
             channelName = GetValidChannelName(channelName);
 
             if (string.IsNullOrEmpty(channelName)) {
-                LogLine($"Null/emtpy {nameof(channelName)}", LogLevel.Error);
+                LogLine($"null/empty {nameof(channelName)}", LogLevel.Error);
                 return false;
             }
 
@@ -411,7 +411,7 @@ namespace ProtoSim.OmniTwitch {
             channelName = GetValidChannelName(channelName);
 
             if (string.IsNullOrEmpty(channelName)) {
-                LogLine($"Null/emtpy {nameof(channelName)}", LogLevel.Error);
+                LogLine($"null/empty {nameof(channelName)}", LogLevel.Error);
                 return false;
             }
 
@@ -433,7 +433,7 @@ namespace ProtoSim.OmniTwitch {
             channelName = GetValidChannelName(channelName);
 
             if (string.IsNullOrEmpty(channelName)) {
-                LogLine($"Null/emtpy {nameof(channelName)}", LogLevel.Error);
+                LogLine($"null/empty {nameof(channelName)}", LogLevel.Error);
                 return false;
             }
 
@@ -454,14 +454,14 @@ namespace ProtoSim.OmniTwitch {
         /// <returns>False if error.</returns>
         public bool HostChannel(string? channel, string? channelName = null) {
             if (string.IsNullOrEmpty(channel)) {
-                LogLine($"Null/emtpy {nameof(channel)}", LogLevel.Warn);
+                LogLine($"null/empty {nameof(channel)}", LogLevel.Warn);
                 return false;
             }
 
             channelName = GetValidChannelName(channelName);
 
             if (string.IsNullOrEmpty(channelName)) {
-                LogLine($"Null/emtpy {nameof(channelName)}", LogLevel.Error);
+                LogLine($"null/empty {nameof(channelName)}", LogLevel.Error);
                 return false;
             }
 
@@ -482,14 +482,14 @@ namespace ProtoSim.OmniTwitch {
         /// <returns>False if error.</returns>
         public bool UnhostChannel(string? channel, string? channelName = null) {
             if (string.IsNullOrEmpty(channel)) {
-                LogLine($"Null/emtpy {nameof(channel)}", LogLevel.Warn);
+                LogLine($"null/empty {nameof(channel)}", LogLevel.Warn);
                 return false;
             }
 
             channelName = GetValidChannelName(channelName);
 
             if (string.IsNullOrEmpty(channelName)) {
-                LogLine($"Null/emtpy {nameof(channelName)}", LogLevel.Error);
+                LogLine($"null/empty {nameof(channelName)}", LogLevel.Error);
                 return false;
             }
 
@@ -510,14 +510,14 @@ namespace ProtoSim.OmniTwitch {
         /// <returns>False if error.</returns>
         public bool AddStreamMarker(string? description, string? channelName = null) {
             if (string.IsNullOrEmpty(description)) {
-                LogLine($"Null/emtpy {nameof(description)}", LogLevel.Warn);
+                LogLine($"null/empty {nameof(description)}", LogLevel.Warn);
                 return false;
             }
 
             channelName = GetValidChannelName(channelName);
 
             if (string.IsNullOrEmpty(channelName)) {
-                LogLine($"Null/emtpy {nameof(channelName)}", LogLevel.Error);
+                LogLine($"null/empty {nameof(channelName)}", LogLevel.Error);
                 return false;
             }
 
@@ -538,14 +538,14 @@ namespace ProtoSim.OmniTwitch {
         /// <returns>False if error.</returns>
         public bool ModUser(string? username, string? channelName = null) {
             if (string.IsNullOrEmpty(username)) {
-                LogLine($"Null/emtpy {nameof(username)}", LogLevel.Warn);
+                LogLine($"null/empty {nameof(username)}", LogLevel.Warn);
                 return false;
             }
 
             channelName = GetValidChannelName(channelName);
 
             if (string.IsNullOrEmpty(channelName)) {
-                LogLine($"Null/emtpy {nameof(channelName)}", LogLevel.Error);
+                LogLine($"null/empty {nameof(channelName)}", LogLevel.Error);
                 return false;
             }
 
@@ -566,14 +566,14 @@ namespace ProtoSim.OmniTwitch {
         /// <returns>False if error.</returns>
         public bool UnmodUser(string? username, string? channelName = null) {
             if (string.IsNullOrEmpty(username)) {
-                LogLine($"Null/emtpy {nameof(username)}", LogLevel.Warn);
+                LogLine($"null/empty {nameof(username)}", LogLevel.Warn);
                 return false;
             }
 
             channelName = GetValidChannelName(channelName);
 
             if (string.IsNullOrEmpty(channelName)) {
-                LogLine($"Null/emtpy {nameof(channelName)}", LogLevel.Error);
+                LogLine($"null/empty {nameof(channelName)}", LogLevel.Error);
                 return false;
             }
 
@@ -595,7 +595,7 @@ namespace ProtoSim.OmniTwitch {
             channelName = GetValidChannelName(channelName);
 
             if (string.IsNullOrEmpty(channelName)) {
-                LogLine($"Null/emtpy {nameof(channelName)}", LogLevel.Error);
+                LogLine($"null/empty {nameof(channelName)}", LogLevel.Error);
                 return false;
             }
 
@@ -616,14 +616,14 @@ namespace ProtoSim.OmniTwitch {
         /// <returns>False if error.</returns>
         public bool RaidChannel(string? channel, string? channelName = null) {
             if (string.IsNullOrEmpty(channel)) {
-                LogLine($"Null/emtpy {nameof(channel)}", LogLevel.Warn);
+                LogLine($"null/empty {nameof(channel)}", LogLevel.Warn);
                 return false;
             }
 
             channelName = GetValidChannelName(channelName);
 
             if (string.IsNullOrEmpty(channelName)) {
-                LogLine($"Null/emtpy {nameof(channelName)}", LogLevel.Error);
+                LogLine($"null/empty {nameof(channelName)}", LogLevel.Error);
                 return false;
             }
 
@@ -645,7 +645,7 @@ namespace ProtoSim.OmniTwitch {
             channelName = GetValidChannelName(channelName);
 
             if (string.IsNullOrEmpty(channelName)) {
-                LogLine($"Null/emtpy {nameof(channelName)}", LogLevel.Error);
+                LogLine($"null/empty {nameof(channelName)}", LogLevel.Error);
                 return false;
             }
 
@@ -673,7 +673,7 @@ namespace ProtoSim.OmniTwitch {
             channelName = GetValidChannelName(channelName);
 
             if (string.IsNullOrEmpty(channelName)) {
-                LogLine($"Null/emtpy {nameof(channelName)}", LogLevel.Error);
+                LogLine($"null/empty {nameof(channelName)}", LogLevel.Error);
                 return false;
             }
 
@@ -695,7 +695,7 @@ namespace ProtoSim.OmniTwitch {
             channelName = GetValidChannelName(channelName);
 
             if (string.IsNullOrEmpty(channelName)) {
-                LogLine($"Null/emtpy {nameof(channelName)}", LogLevel.Error);
+                LogLine($"null/empty {nameof(channelName)}", LogLevel.Error);
                 return false;
             }
 
@@ -717,7 +717,7 @@ namespace ProtoSim.OmniTwitch {
             channelName = GetValidChannelName(channelName);
 
             if (string.IsNullOrEmpty(channelName)) {
-                LogLine($"Null/emtpy {nameof(channelName)}", LogLevel.Error);
+                LogLine($"null/empty {nameof(channelName)}", LogLevel.Error);
                 return false;
             }
 
@@ -739,7 +739,7 @@ namespace ProtoSim.OmniTwitch {
             channelName = GetValidChannelName(channelName);
 
             if (string.IsNullOrEmpty(channelName)) {
-                LogLine($"Null/emtpy {nameof(channelName)}", LogLevel.Error);
+                LogLine($"null/empty {nameof(channelName)}", LogLevel.Error);
                 return false;
             }
 
@@ -761,7 +761,7 @@ namespace ProtoSim.OmniTwitch {
         /// <returns>False if error.</returns>
         public bool TimeoutUser(string? username, int seconds = 600, string? channelName = null) {
             if (string.IsNullOrEmpty(username)) {
-                LogLine($"Null/empty {nameof(username)}", LogLevel.Warn);
+                LogLine($"null/empty {nameof(username)}", LogLevel.Warn);
                 return false;
             }
             
@@ -773,7 +773,7 @@ namespace ProtoSim.OmniTwitch {
             channelName = GetValidChannelName(channelName);
 
             if (string.IsNullOrEmpty(channelName)) {
-                LogLine($"Null/emtpy {nameof(channelName)}", LogLevel.Error);
+                LogLine($"null/empty {nameof(channelName)}", LogLevel.Error);
                 return false;
             }
 
@@ -794,14 +794,14 @@ namespace ProtoSim.OmniTwitch {
         /// <returns>False if error.</returns>
         public bool UntimeoutUser(string? username, string? channelName = null) {
             if (string.IsNullOrEmpty(username)) {
-                LogLine($"Null/emtpy {nameof(username)}", LogLevel.Warn);
+                LogLine($"null/empty {nameof(username)}", LogLevel.Warn);
                 return false;
             }
 
             channelName = GetValidChannelName(channelName);
 
             if (string.IsNullOrEmpty(channelName)) {
-                LogLine($"Null/emtpy {nameof(channelName)}", LogLevel.Error);
+                LogLine($"null/empty {nameof(channelName)}", LogLevel.Error);
                 return false;
             }
 
@@ -822,14 +822,14 @@ namespace ProtoSim.OmniTwitch {
         /// <returns>False if error.</returns>
         public bool VIPUser(string? username, string? channelName = null) {
             if (string.IsNullOrEmpty(username)) {
-                LogLine($"Null/emtpy {nameof(username)}", LogLevel.Warn);
+                LogLine($"null/empty {nameof(username)}", LogLevel.Warn);
                 return false;
             }
 
             channelName = GetValidChannelName(channelName);
 
             if (string.IsNullOrEmpty(channelName)) {
-                LogLine($"Null/emtpy {nameof(channelName)}", LogLevel.Error);
+                LogLine($"null/empty {nameof(channelName)}", LogLevel.Error);
                 return false;
             }
 
@@ -851,7 +851,7 @@ namespace ProtoSim.OmniTwitch {
             channelName = GetValidChannelName(channelName);
 
             if (string.IsNullOrEmpty(channelName)) {
-                LogLine($"Null/emtpy {nameof(channelName)}", LogLevel.Error);
+                LogLine($"null/empty {nameof(channelName)}", LogLevel.Error);
                 return false;
             }
 
@@ -868,7 +868,7 @@ namespace ProtoSim.OmniTwitch {
             if (string.IsNullOrEmpty(text))
                 return;
 
-            Debug.WriteLine(text, logLevel.ToString());
+            Debug.WriteLine($"[{DateTime.UtcNow.TimeOfDay}] OmniTwich.ChatClient: {text}", logLevel.ToString());
         }
 
         private void TimerPing_OnElapsed(object sender, ElapsedEventArgs e) {
@@ -1120,7 +1120,8 @@ namespace ProtoSim.OmniTwitch {
                     }
                 }
                 else if (message.StartsWith("PING") || e.IsPing) {
-                    socket.Send("PONG\r\n");
+                    LogLine("PING received", LogLevel.Info);
+                    socket.Send("PONG :tmi.twitch.tv");
                     _timerPing.Stop();
                     _timerPing.Start();
                 }

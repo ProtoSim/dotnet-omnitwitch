@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>ProtoSim.OmniTwitch</id>
+    <version>0.10.13.7</version>
+    <authors>Sebastian Romanet</authors>
+    <license type="file">LICENSE.txt</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <description>A .NET 5.0 class library that provides communication with Twitch via their various APIs and services</description>
+    <repository type="GitHub" url="https://github.com/ProtoSim/dotnet-omnitwitch.git" />
+    <dependencies>
+      <group targetFramework="net5.0">
+        <dependency id="websocketsharp.core" version="1.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\Local\NuGet\net5.0\ProtoSim.OmniTwitch.dll" target="lib\net5.0\ProtoSim.OmniTwitch.dll" />
+    <file src="D:\Local\NuGet\net5.0\ProtoSim.OmniTwitch.xml" target="lib\net5.0\ProtoSim.OmniTwitch.xml" />
+    <file src="C:\Users\roman\source\repos\ProtoSim.OmniTwitch\LICENSE.txt" target="LICENSE.txt" />
+  </files>
+</package>

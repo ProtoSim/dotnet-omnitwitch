@@ -69,7 +69,7 @@
             Gets the token used by the client.
             </summary>
         </member>
-        <member name="P:ProtoSim.OmniTwitch.ChatClient.CommandIdentifier">
+        <member name="F:ProtoSim.OmniTwitch.ChatClient.CommandIdentifier">
             <summary>
             Gets or sets the command identifier recognized by the client.
             </summary>
@@ -643,6 +643,2256 @@
         <member name="P:ProtoSim.OmniTwitch.UserPartedArgs.Username">
             <summary>
             Gets the name of the user.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.EventSub.Events.ChannelBanArgs">
+            <summary>
+            Provides a set of parameters related to a ChannelBan event.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelBanArgs.UserId">
+            <summary>
+            Gets the User's Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelBanArgs.UserUsername">
+            <summary>
+            Gets the User's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelBanArgs.UserDisplayName">
+            <summary>
+            Gets the User's Display Name.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelBanArgs.BroadcasterUserId">
+            <summary>
+            Gets the Broadcaster's User Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelBanArgs.BroadcasterUsername">
+            <summary>
+            Gets the Broadcaster's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelBanArgs.BroadcasterDisplayName">
+            <summary>
+            Gets the Broadcaster's Display Name.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelBanArgs.ModeratorUserId">
+            <summary>
+            Gets the Moderator's User Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelBanArgs.ModeratorUsername">
+            <summary>
+            Gets the Moderator's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelBanArgs.ModeratorDisplayName">
+            <summary>
+            Gets the Moderator's Display Name.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelBanArgs.Reason">
+            <summary>
+            Gets the Reason.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelBanArgs.EndsAt">
+            <summary>
+            Gets the string representation of Ends At.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelBanArgs.IsPermanent">
+            <summary>
+            Gets a boolean value indicating if it Is Permanent.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelBanArgs.#ctor">
+            <summary>
+            Creates a new default instance of ChannelBanArgs.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelBanArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Creates a new instance of ChannelBanArgs with the provided values.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelBanArgs.ToString">
+            <summary>
+            Converts the object to a JSON string.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.EventSub.Events.ChannelCheerArgs">
+            <summary>
+            Provides a set of parameters related to a ChannelCheer event.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelCheerArgs.IsAnonymous">
+            <summary>
+            Gets a boolean value indicating if it Is Anonymous.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelCheerArgs.UserId">
+            <summary>
+            Gets the User's Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelCheerArgs.UserUsername">
+            <summary>
+            Gets the User's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelCheerArgs.UserDisplayName">
+            <summary>
+            Gets the User's Display Name.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelCheerArgs.BroadcasterUserId">
+            <summary>
+            Gets the Broadcaster's User Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelCheerArgs.BroadcasterUsername">
+            <summary>
+            Gets the Broadcaster's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelCheerArgs.BroadcasterDisplayName">
+            <summary>
+            Gets the Broadcaster's Display Name.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelCheerArgs.Message">
+            <summary>
+            Gets the Message.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelCheerArgs.Bits">
+            <summary>
+            Gets the Bits.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelCheerArgs.#ctor">
+            <summary>
+            Creates a new default instance of ChannelCheerArgs.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelCheerArgs.#ctor(System.Boolean,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Creates a new instance of ChannelCheerArgs with the provided values.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelCheerArgs.ToString">
+            <summary>
+            Converts the object to a JSON string.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.EventSub.Events.ChannelFollowArgs">
+            <summary>
+            Provides a set of parameters related to a ChannelFollow event.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelFollowArgs.UserId">
+            <summary>
+            Gets the User's Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelFollowArgs.UserUsername">
+            <summary>
+            Gets the User's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelFollowArgs.UserDisplayName">
+            <summary>
+            Gets the User's Display Name.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelFollowArgs.BroadcasterUserId">
+            <summary>
+            Gets the Broadcaster's User Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelFollowArgs.BroadcasterUsername">
+            <summary>
+            Gets the Broadcaster's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelFollowArgs.BroadcasterDisplayName">
+            <summary>
+            Gets the Broadcaster's Display Name.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelFollowArgs.FollowedAt">
+            <summary>
+            Gets the string representation of Followed At.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelFollowArgs.#ctor">
+            <summary>
+            Creates a new default instance of ChannelFollowArgs.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelFollowArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Creates a new instance of ChannelFollowArgs with the provided values.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelFollowArgs.ToString">
+            <summary>
+            Converts the object to a JSON string.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainBeginArgs">
+            <summary>
+            Provides a set of parameters related to a ChannelHypeTrainBegin event.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainBeginArgs.HypeTrainId">
+            <summary>
+            Gets the Hype Train Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainBeginArgs.BroadcasterUserId">
+            <summary>
+            Gets the Broadcaster's User Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainBeginArgs.BroadcasterUsername">
+            <summary>
+            Gets the Broadcaster's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainBeginArgs.BroadcasterDisplayName">
+            <summary>
+            Gets the Broadcaster's Display Name.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainBeginArgs.PointsTotal">
+            <summary>
+            Gets the Points Total.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainBeginArgs.PointsProgress">
+            <summary>
+            Gets the Points Progress.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainBeginArgs.PointsGoal">
+            <summary>
+            Gets the Points Goal.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainBeginArgs.TopContributions">
+            <summary>
+            Gets the Top Contributions.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainBeginArgs.LastContribution">
+            <summary>
+            Gets the Last Contribution.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainBeginArgs.StartedAt">
+            <summary>
+            Gets the string representation of Started At.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainBeginArgs.ExpiresAt">
+            <summary>
+            Gets the string representation of Expires At.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainBeginArgs.#ctor">
+            <summary>
+            Creates a new default instance of ChannelHypeTrainBeginArgs.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainBeginArgs.#ctor(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Collections.Generic.List{System.ValueTuple{System.String,System.String,System.String,System.String,System.Int32}},System.ValueTuple{System.String,System.String,System.String,System.String,System.Int32},System.String,System.String)">
+            <summary>
+            Creates a new instance of ChannelHypeTrainBeginArgs with the provided values.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainBeginArgs.ToString">
+            <summary>
+            Converts the object to a JSON string.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainEndArgs">
+            <summary>
+            Provides a set of parameters related to a ChannelHypeTrainEnd event.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainEndArgs.HypeTrainId">
+            <summary>
+            Gets the Hype Train Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainEndArgs.BroadcasterUserId">
+            <summary>
+            Gets the Broadcaster's User Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainEndArgs.BroadcasterUsername">
+            <summary>
+            Gets the Broadcaster's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainEndArgs.BroadcasterDisplayName">
+            <summary>
+            Gets the Broadcaster's Display Name.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainEndArgs.Level">
+            <summary>
+            Gets the Level.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainEndArgs.PointsTotal">
+            <summary>
+            Gets the Points Total.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainEndArgs.TopContributions">
+            <summary>
+            Gets the Top Contributions.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainEndArgs.StartedAt">
+            <summary>
+            Gets the string representation of Started At.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainEndArgs.EndedAt">
+            <summary>
+            Gets the string representation of Ended At.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainEndArgs.CooldownEndsAt">
+            <summary>
+            Gets the string representation of Cooldown Ends At.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainEndArgs.#ctor">
+            <summary>
+            Creates a new default instance of ChannelHypeTrainEndArgs.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainEndArgs.#ctor(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Collections.Generic.List{System.ValueTuple{System.String,System.String,System.String,System.String,System.Int32}},System.String,System.String,System.String)">
+            <summary>
+            Creates a new instance of ChannelHypeTrainEndArgs with the provided values.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainEndArgs.ToString">
+            <summary>
+            Converts the object to a JSON string.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainProgressArgs">
+            <summary>
+            Provides a set of parameters related to a ChannelHypeTrainProgress event.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainProgressArgs.HypeTrainId">
+            <summary>
+            Gets the Hype Train Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainProgressArgs.BroadcasterUserId">
+            <summary>
+            Gets the Broadcaster's User Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainProgressArgs.BroadcasterUsername">
+            <summary>
+            Gets the Broadcaster's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainProgressArgs.BroadcasterDisplayName">
+            <summary>
+            Gets the Broadcaster's Display Name.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainProgressArgs.Level">
+            <summary>
+            Gets the Level.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainProgressArgs.PointsTotal">
+            <summary>
+            Gets the Points Total.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainProgressArgs.PointsProgress">
+            <summary>
+            Gets the Points Progress.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainProgressArgs.PointsGoal">
+            <summary>
+            Gets the Points Goal.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainProgressArgs.TopContributions">
+            <summary>
+            Gets the Top Contributions.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainProgressArgs.LastContribution">
+            <summary>
+            Gets the Last Contribution.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainProgressArgs.StartedAt">
+            <summary>
+            Gets the string representation of Started At.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainProgressArgs.ExpiresAt">
+            <summary>
+            Gets the string representation of Expires At.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainProgressArgs.#ctor">
+            <summary>
+            Creates a new default instance of ChannelHypeTrainProgressArgs.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainProgressArgs.#ctor(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Collections.Generic.List{System.ValueTuple{System.String,System.String,System.String,System.String,System.Int32}},System.ValueTuple{System.String,System.String,System.String,System.String,System.Int32},System.String,System.String)">
+            <summary>
+            Creates a new instance of ChannelHypeTrainProgressArgs with the provided values.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelHypeTrainProgressArgs.ToString">
+            <summary>
+            Converts the object to a JSON string.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.EventSub.Events.ChannelModeratorAddArgs">
+            <summary>
+            Provides a set of parameters related to a ChannelModeratorAdd event.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelModeratorAddArgs.BroadcasterUserId">
+            <summary>
+            Gets the Broadcaster's User Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelModeratorAddArgs.BroadcasterUsername">
+            <summary>
+            Gets the Broadcaster's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelModeratorAddArgs.BroadcasterDisplayName">
+            <summary>
+            Gets the Broadcaster's Display Name.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelModeratorAddArgs.UserId">
+            <summary>
+            Gets the User's Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelModeratorAddArgs.UserUsername">
+            <summary>
+            Gets the User's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelModeratorAddArgs.UserDisplayName">
+            <summary>
+            Gets the User's Display Name.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelModeratorAddArgs.#ctor">
+            <summary>
+            Creates a new default instance of ChannelModeratorAddArgs.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelModeratorAddArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Creates a new instance of ChannelModeratorAddArgs with the provided values.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelModeratorAddArgs.ToString">
+            <summary>
+            Converts the object to a JSON string.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.EventSub.Events.ChannelModeratorRemoveArgs">
+            <summary>
+            Provides a set of parameters related to a ChannelModeratorRemove event.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelModeratorRemoveArgs.BroadcasterUserId">
+            <summary>
+            Gets the Broadcaster's User Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelModeratorRemoveArgs.BroadcasterUsername">
+            <summary>
+            Gets the Broadcaster's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelModeratorRemoveArgs.BroadcasterDisplayName">
+            <summary>
+            Gets the Broadcaster's Display Name.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelModeratorRemoveArgs.UserId">
+            <summary>
+            Gets the User's Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelModeratorRemoveArgs.UserUsername">
+            <summary>
+            Gets the User's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelModeratorRemoveArgs.UserDisplayName">
+            <summary>
+            Gets the User's Display Name.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelModeratorRemoveArgs.#ctor">
+            <summary>
+            Creates a new default instance of ChannelModeratorRemoveArgs.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelModeratorRemoveArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Creates a new instance of ChannelModeratorRemoveArgs with the provided values.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelModeratorRemoveArgs.ToString">
+            <summary>
+            Converts the object to a JSON string.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardAddArgs">
+            <summary>
+            Provides a set of parameters related to a ChannelPointsCustomRewardAdd event.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardAddArgs.RewardId">
+            <summary>
+            Gets the Reward Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardAddArgs.BroadcasterUserId">
+            <summary>
+            Gets the Broadcaster's User Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardAddArgs.BroadcasterUsername">
+            <summary>
+            Gets the Broadcaster's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardAddArgs.BroadcasterDisplayName">
+            <summary>
+            Gets the Broadcaster's Display Name.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardAddArgs.IsEnabled">
+            <summary>
+            Gets a boolean value indicating if it Is Enabled.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardAddArgs.IsPaused">
+            <summary>
+            Gets a boolean value indicating if it Is Paused.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardAddArgs.IsInStock">
+            <summary>
+            Gets a boolean value indicating if it Is In Stock.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardAddArgs.RewardTitle">
+            <summary>
+            Gets the Reward Title.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardAddArgs.RewardCost">
+            <summary>
+            Gets the Reward Cost.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardAddArgs.RewardPrompt">
+            <summary>
+            Gets the Reward Prompt.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardAddArgs.IsUserInputRequired">
+            <summary>
+            Gets a boolean value indicating if User Input Is Required.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardAddArgs.ShouldRedemptionsSkipRequestQueue">
+            <summary>
+            Gets a boolean value indicating if Redemptions Should Skip Request Queue.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardAddArgs.MaxPerStream">
+            <summary>
+            Gets the Max Per Stream.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardAddArgs.MaxPerUserPerStream">
+            <summary>
+            Gets the Max Per User Per Stream.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardAddArgs.BackgroundColor">
+            <summary>
+            Gets the Background Color.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardAddArgs.Image">
+            <summary>
+            Gets the Image.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardAddArgs.DefaultImage">
+            <summary>
+            Gets the Default Image.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardAddArgs.GlobalCooldown">
+            <summary>
+            Gets the Global Cooldown.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardAddArgs.CooldownExpiresAt">
+            <summary>
+            Gets the string representation of Cooldown Expires At.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardAddArgs.RedemptionsRedeemedCurrentStream">
+            <summary>
+            Gets the Redemptions Redeemed Current Stream.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardAddArgs.#ctor">
+            <summary>
+            Creates a new default instance of ChannelPointsCustomRewardAddArgs.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardAddArgs.#ctor(System.String,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.String,System.Int32,System.String,System.Boolean,System.Boolean,System.ValueTuple{System.Boolean,System.Int32},System.ValueTuple{System.Boolean,System.Int32},System.String,System.ValueTuple{System.String,System.String,System.String},System.ValueTuple{System.String,System.String,System.String},System.ValueTuple{System.Boolean,System.Int32},System.String,System.String)">
+            <summary>
+            Creates a new instance of ChannelPointsCustomRewardAddArgs with the provided values.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardAddArgs.ToString">
+            <summary>
+            Converts the object to a JSON string.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRedemptionAddArgs">
+            <summary>
+            Provides a set of parameters related to a ChannelPointsCustomRewardRedemptionAdd event.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRedemptionAddArgs.RedemptionId">
+            <summary>
+            Gets the Redemption Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRedemptionAddArgs.BroadcasterUserId">
+            <summary>
+            Gets the Broadcaster's User Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRedemptionAddArgs.BroadcasterUsername">
+            <summary>
+            Gets the Broadcaster's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRedemptionAddArgs.BroadcasterDisplayName">
+            <summary>
+            Gets the Broadcaster's Display Name.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRedemptionAddArgs.UserId">
+            <summary>
+            Gets the User's Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRedemptionAddArgs.UserUsername">
+            <summary>
+            Gets the User's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRedemptionAddArgs.UserDisplayName">
+            <summary>
+            Gets the User's Display Name.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRedemptionAddArgs.UserInput">
+            <summary>
+            Gets the User Input.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRedemptionAddArgs.Status">
+            <summary>
+            Gets the Status.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRedemptionAddArgs.Reward">
+            <summary>
+            Gets the Reward.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRedemptionAddArgs.RedeemedAt">
+            <summary>
+            Gets the string representation of Redeemed At.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRedemptionAddArgs.#ctor">
+            <summary>
+            Creates a new default instance of ChannelPointsCustomRewardRedemptionAddArgs.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRedemptionAddArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.ValueTuple{System.String,System.String,System.Int32,System.String},System.String)">
+            <summary>
+            Creates a new instance of ChannelPointsCustomRewardRedemptionAddArgs with the provided values.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRedemptionAddArgs.ToString">
+            <summary>
+            Converts the object to a JSON string.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRedemptionUpdateArgs">
+            <summary>
+            Provides a set of parameters related to a ChannelPointsCustomRewardRedemptionUpdate event.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRedemptionUpdateArgs.RedemptionId">
+            <summary>
+            Gets the Redemption Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRedemptionUpdateArgs.BroadcasterUserId">
+            <summary>
+            Gets the Broadcaster's User Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRedemptionUpdateArgs.BroadcasterUsername">
+            <summary>
+            Gets the Broadcaster's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRedemptionUpdateArgs.BroadcasterDisplayName">
+            <summary>
+            Gets the Broadcaster's Display Name.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRedemptionUpdateArgs.UserId">
+            <summary>
+            Gets the User's Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRedemptionUpdateArgs.UserUsername">
+            <summary>
+            Gets the User's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRedemptionUpdateArgs.UserDisplayName">
+            <summary>
+            Gets the User's Display Name.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRedemptionUpdateArgs.UserInput">
+            <summary>
+            Gets the User Input.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRedemptionUpdateArgs.Status">
+            <summary>
+            Gets the Status.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRedemptionUpdateArgs.Reward">
+            <summary>
+            Gets the Reward.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRedemptionUpdateArgs.RedeemedAt">
+            <summary>
+            Gets the string representation of Redeemed At.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRedemptionUpdateArgs.#ctor">
+            <summary>
+            Creates a new default instance of ChannelPointsCustomRewardRedemptionUpdateArgs.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRedemptionUpdateArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.ValueTuple{System.String,System.String,System.Int32,System.String},System.String)">
+            <summary>
+            Creates a new instance of ChannelPointsCustomRewardRedemptionUpdateArgs with the provided values.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRedemptionUpdateArgs.ToString">
+            <summary>
+            Converts the object to a JSON string.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRemoveArgs">
+            <summary>
+            Provides a set of parameters related to a ChannelPointsCustomRewardRemove event.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRemoveArgs.RewardId">
+            <summary>
+            Gets the Reward Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRemoveArgs.BroadcasterUserId">
+            <summary>
+            Gets the Broadcaster's User Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRemoveArgs.BroadcasterUsername">
+            <summary>
+            Gets the Broadcaster's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRemoveArgs.BroadcasterDisplayName">
+            <summary>
+            Gets the Broadcaster's Display Name.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRemoveArgs.IsEnabled">
+            <summary>
+            Gets a boolean value indicating if it Is Enabled.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRemoveArgs.IsPaused">
+            <summary>
+            Gets a boolean value indicating if it Is Paused.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRemoveArgs.IsInStock">
+            <summary>
+            Gets a boolean value indicating if it Is In Stock.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRemoveArgs.RewardTitle">
+            <summary>
+            Gets the Reward Title.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRemoveArgs.RewardCost">
+            <summary>
+            Gets the Reward Cost.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRemoveArgs.RewardPrompt">
+            <summary>
+            Gets the Reward Prompt.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRemoveArgs.IsUserInputRequired">
+            <summary>
+            Gets a boolean value indicating if User Input Is Required.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRemoveArgs.ShouldRedemptionsSkipRequestQueue">
+            <summary>
+            Gets a boolean value indicating if Redemptions Should Skip Request Queue.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRemoveArgs.MaxPerStream">
+            <summary>
+            Gets the Max Per stream.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRemoveArgs.MaxPerUserPerStream">
+            <summary>
+            Gets the Max Per User Per Stream.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRemoveArgs.BackgroundColor">
+            <summary>
+            Gets the Background Color.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRemoveArgs.Image">
+            <summary>
+            Gets the Image.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRemoveArgs.DefaultImage">
+            <summary>
+            Gets the Default Image.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRemoveArgs.GlobalCooldown">
+            <summary>
+            Gets the Global Cooldown.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRemoveArgs.CooldownExpiresAt">
+            <summary>
+            Gets the string representation of Cooldown Expires At.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRemoveArgs.RedemptionsRedeemedCurrentStream">
+            <summary>
+            Gets the Redemptions Redeemed Current Stream.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRemoveArgs.#ctor">
+            <summary>
+            Creates a new default instance of ChannelPointsCustomRewardRemoveArgs.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRemoveArgs.#ctor(System.String,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.String,System.Int32,System.String,System.Boolean,System.Boolean,System.ValueTuple{System.Boolean,System.Int32},System.ValueTuple{System.Boolean,System.Int32},System.String,System.ValueTuple{System.String,System.String,System.String},System.ValueTuple{System.String,System.String,System.String},System.ValueTuple{System.Boolean,System.Int32},System.String,System.String)">
+            <summary>
+            Creates a new instance of ChannelPointsCustomRewardRemoveArgs with the provided values.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardRemoveArgs.ToString">
+            <summary>
+            Converts the object to a JSON string.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardUpdateArgs">
+            <summary>
+            Provides a set of parameters related to a ChannelPointsCustomRewardUpdate event.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardUpdateArgs.RewardId">
+            <summary>
+            Gets the Reward Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardUpdateArgs.BroadcasterUserId">
+            <summary>
+            Gets the Broadcaster's User Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardUpdateArgs.BroadcasterUsername">
+            <summary>
+            Gets the Broadcaster's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardUpdateArgs.BroadcasterDisplayName">
+            <summary>
+            Gets the Broadcaster's Display Name.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardUpdateArgs.IsEnabled">
+            <summary>
+            Gets a boolean value indicating if it Is Enabled.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardUpdateArgs.IsPaused">
+            <summary>
+            Gets a boolean value indicating if it Is Paused.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardUpdateArgs.IsInStock">
+            <summary>
+            Gets a boolean value indicating if it Is In Stock.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardUpdateArgs.RewardTitle">
+            <summary>
+            Gets the Reward Title.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardUpdateArgs.RewardCost">
+            <summary>
+            Gets the Reward Cost.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardUpdateArgs.RewardPrompt">
+            <summary>
+            Gets the Reward Prompt.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardUpdateArgs.IsUserInputRequired">
+            <summary>
+            Gets a boolean value indicating if User Input Is Required.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardUpdateArgs.ShouldRedemptionsSkipRequestQueue">
+            <summary>
+            Gets a boolean value indicating if Redemptions Should Skip Request Queue.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardUpdateArgs.MaxPerStream">
+            <summary>
+            Gets the Max Per Stream.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardUpdateArgs.MaxPerUserPerStream">
+            <summary>
+            Gets the Max Per User Per Stream.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardUpdateArgs.BackgroundColor">
+            <summary>
+            Gets the Background Color.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardUpdateArgs.Image">
+            <summary>
+            Gets the Image.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardUpdateArgs.DefaultImage">
+            <summary>
+            Gets the Default Image.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardUpdateArgs.GlobalCooldown">
+            <summary>
+            Gets the Global Cooldown.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardUpdateArgs.CooldownExpiresAt">
+            <summary>
+            Gets the string representation of Cooldown Expires At.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardUpdateArgs.RedemptionsRedeemedCurrentStream">
+            <summary>
+            Gets the Redemptions Redeemed Current Stream.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardUpdateArgs.#ctor">
+            <summary>
+            Creates a new default instance of ChannelPointsCustomRewardUpdateArgs.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardUpdateArgs.#ctor(System.String,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.String,System.Int32,System.String,System.Boolean,System.Boolean,System.ValueTuple{System.Boolean,System.Int32},System.ValueTuple{System.Boolean,System.Int32},System.String,System.ValueTuple{System.String,System.String,System.String},System.ValueTuple{System.String,System.String,System.String},System.ValueTuple{System.Boolean,System.Int32},System.String,System.String)">
+            <summary>
+            Creates a new instance of ChannelPointsCustomRewardUpdateArgs with the provided values.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelPointsCustomRewardUpdateArgs.ToString">
+            <summary>
+            Converts the object to a JSON string.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.EventSub.Events.ChannelPollBeginArgs">
+            <summary>
+            Provides a set of parameters related to a ChannelPollBegin event.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPollBeginArgs.PollId">
+            <summary>
+            Gets the Poll Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPollBeginArgs.BroadcasterUserId">
+            <summary>
+            Gets the Broadcaster's User Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPollBeginArgs.BroadcasterUsername">
+            <summary>
+            Gets the Broadcaster's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPollBeginArgs.BroadcasterDisplayName">
+            <summary>
+            Gets the Broadcaster's Display Name.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPollBeginArgs.Title">
+            <summary>
+            Gets the Title.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.EventSub.Events.ChannelPollBeginArgs.Choices">
+            <summary>
+            Gets the Choices.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.EventSub.Events.ChannelPollBeginArgs.BitsVoting">
+            <summary>
+            Gets the Bits Voting.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.EventSub.Events.ChannelPollBeginArgs.ChannelPointsVoting">
+            <summary>
+            Gets the Channel Points Voting.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPollBeginArgs.StartedAt">
+            <summary>
+            Gets the string representation of Started At.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPollBeginArgs.EndsAt">
+            <summary>
+            Gets the string representation of Ends At.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelPollBeginArgs.#ctor">
+            <summary>
+            Creates a new default instance of ChannelPollBeginArgs.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelPollBeginArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.ValueTuple{System.String,System.String,System.Int32,System.Int32,System.Int32}},System.ValueTuple{System.Boolean,System.Int32},System.ValueTuple{System.Boolean,System.Int32},System.String,System.String)">
+            <summary>
+            Creates a new instance of ChannelPollBeginArgs with the provided values.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelPollBeginArgs.ToString">
+            <summary>
+            Converts the object to a JSON string.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.EventSub.Events.ChannelPollEndArgs">
+            <summary>
+            Provides a set of parameters related to a ChannelPollEnd event.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPollEndArgs.PollId">
+            <summary>
+            Gets the Poll Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPollEndArgs.BroadcasterUserId">
+            <summary>
+            Gets the Broadcaster's User Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPollEndArgs.BroadcasterUsername">
+            <summary>
+            Gets the Broadcaster's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPollEndArgs.BroadcasterDisplayName">
+            <summary>
+            Gets the Broadcaster's Display Name.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPollEndArgs.Title">
+            <summary>
+            Gets the Title.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.EventSub.Events.ChannelPollEndArgs.Choices">
+            <summary>
+            Gets the Choices.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.EventSub.Events.ChannelPollEndArgs.BitsVoting">
+            <summary>
+            Gets the Bits Voting.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.EventSub.Events.ChannelPollEndArgs.ChannelPointsVoting">
+            <summary>
+            Gets the Channel Points Voting.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPollEndArgs.Status">
+            <summary>
+            Gets the Status.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPollEndArgs.StartedAt">
+            <summary>
+            Gets the string representation of Started At.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPollEndArgs.EndedAt">
+            <summary>
+            Gets the string representation of Ended At.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelPollEndArgs.#ctor">
+            <summary>
+            Creates a new default instance of ChannelPollEndArgs.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelPollEndArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.ValueTuple{System.String,System.String,System.Int32,System.Int32,System.Int32},System.ValueTuple{System.Boolean,System.Int32},System.ValueTuple{System.Boolean,System.Int32},System.String,System.String,System.String)">
+            <summary>
+            Creates a new instance of ChannelPollEndArgs with the provided values.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelPollEndArgs.ToString">
+            <summary>
+            Converts the object to a JSON string.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.EventSub.Events.ChannelPollProgressArgs">
+            <summary>
+            Provides a set of parameters related to a ChannelPollProgress event.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPollProgressArgs.PollId">
+            <summary>
+            Gets the Poll Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPollProgressArgs.BroadcasterUserId">
+            <summary>
+            Gets the Broadcaster's User Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPollProgressArgs.BroadcasterUsername">
+            <summary>
+            Gets the Broadcaster's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPollProgressArgs.BroadcasterDisplayName">
+            <summary>
+            Gets the Broadcaster's Display Name.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPollProgressArgs.Title">
+            <summary>
+            Gets the Title.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.EventSub.Events.ChannelPollProgressArgs.Choices">
+            <summary>
+            Gets the Choices.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.EventSub.Events.ChannelPollProgressArgs.BitsVoting">
+            <summary>
+            Gets the Bits Voting.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.EventSub.Events.ChannelPollProgressArgs.ChannelPointsVoting">
+            <summary>
+            Gets the Channel Points Voting.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPollProgressArgs.StartedAt">
+            <summary>
+            Gets the string representation of Started At.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPollProgressArgs.EndsAt">
+            <summary>
+            Gets the string representation of Ends At.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelPollProgressArgs.#ctor">
+            <summary>
+            Creates a new default instance of ChannelPollProgressArgs.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelPollProgressArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.ValueTuple{System.String,System.String,System.Int32,System.Int32,System.Int32}},System.ValueTuple{System.Boolean,System.Int32},System.ValueTuple{System.Boolean,System.Int32},System.String,System.String)">
+            <summary>
+            Creates a new instance of ChannelPollProgressArgs with the provided values.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelPollProgressArgs.ToString">
+            <summary>
+            Converts the object to a JSON string.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredicitionEndArgs">
+            <summary>
+            Provides a set of parameters related to a ChannelPredicitionEnd event.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredicitionEndArgs.PredictionId">
+            <summary>
+            Gets the Prediction Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredicitionEndArgs.BroadcasterUserId">
+            <summary>
+            Gets the Broadcaster's User Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredicitionEndArgs.BroadcasterUsername">
+            <summary>
+            Gets the Broadcaster's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredicitionEndArgs.BroadcasterDisplayName">
+            <summary>
+            Gets the Broadcaster's Display Name.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredicitionEndArgs.Title">
+            <summary>
+            Gets the Title.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredicitionEndArgs.WinningOutcomeId">
+            <summary>
+            Gets the WinningOutcome Id.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredicitionEndArgs.Outcomes">
+            <summary>
+            Gets the Outcomes.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredicitionEndArgs.Status">
+            <summary>
+            Gets the Status.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredicitionEndArgs.StartedAt">
+            <summary>
+            Gets the string representation of Started At.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredicitionEndArgs.EndedAt">
+            <summary>
+            Gets the string representation of Ended At.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredicitionEndArgs.#ctor">
+            <summary>
+            Creates a new default instance of ChannelPredicitionEndArgs.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredicitionEndArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.ValueTuple{System.String,System.String,System.String,System.Int32,System.Int32,System.Collections.Generic.List{System.ValueTuple{System.String,System.String,System.String,System.Int32,System.Int32}}},System.String,System.String,System.String)">
+            <summary>
+            Creates a new instance of ChannelPredicitionEndArgs with the provided values.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredicitionEndArgs.ToString">
+            <summary>
+            Converts the object to a JSON string.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredictionBeginArgs">
+            <summary>
+            Provides a set of parameters related to a ChannelPredictionBegin event.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredictionBeginArgs.PredictionId">
+            <summary>
+            Gets the Prediction Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredictionBeginArgs.BroadcasterUserId">
+            <summary>
+            Gets the Broadcaster's User Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredictionBeginArgs.BroadcasterUsername">
+            <summary>
+            Gets the Broadcaster's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredictionBeginArgs.BroadcasterDisplayName">
+            <summary>
+            Gets the Broadcaster's Display Name.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredictionBeginArgs.Title">
+            <summary>
+            Gets the Title.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredictionBeginArgs.Outcomes">
+            <summary>
+            Gets the Outcomes.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredictionBeginArgs.StartedAt">
+            <summary>
+            Gets the string representation of Started At.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredictionBeginArgs.LocksAt">
+            <summary>
+            Gets the string representation of Locks At.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredictionBeginArgs.#ctor">
+            <summary>
+            Creates a new default instance of ChannelPredictionBeginArgs.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredictionBeginArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.ValueTuple{System.String,System.String,System.String,System.Int32,System.Int32,System.Collections.Generic.List{System.ValueTuple{System.String,System.String,System.String,System.Int32,System.Int32}}},System.String,System.String)">
+            <summary>
+            Creates a new instance of ChannelPredictionBeginArgs with the provided values.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredictionBeginArgs.ToString">
+            <summary>
+            Converts the object to a JSON string.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredictionLockArgs">
+            <summary>
+            Provides a set of parameters related to a ChannelPredictionLock event.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredictionLockArgs.PredictionId">
+            <summary>
+            Gets the Prediction Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredictionLockArgs.BroadcasterUserId">
+            <summary>
+            Gets the Broadcaster's User Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredictionLockArgs.BroadcasterUsername">
+            <summary>
+            Gets the Broadcaster's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredictionLockArgs.BroadcasterDisplayName">
+            <summary>
+            Gets the Broadcaster's Display Name.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredictionLockArgs.Title">
+            <summary>
+            Gets the Title.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredictionLockArgs.Outcomes">
+            <summary>
+            Gets the Outcomes.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredictionLockArgs.StartedAt">
+            <summary>
+            Gets the string representation of Started At.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredictionLockArgs.LockedAt">
+            <summary>
+            Gets the string representation of Locks At.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredictionLockArgs.#ctor">
+            <summary>
+            Creates a new default instance of ChannelPredictionLockArgs.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredictionLockArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.ValueTuple{System.String,System.String,System.String,System.Int32,System.Int32,System.Collections.Generic.List{System.ValueTuple{System.String,System.String,System.String,System.Int32,System.Int32}}},System.String,System.String)">
+            <summary>
+            Creates a new instance of ChannelPredictionLockArgs with the provided values.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredictionLockArgs.ToString">
+            <summary>
+            Converts the object to a JSON string.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredictionProgressArgs">
+            <summary>
+            Provides a set of parameters related to a ChannelPredictionProgress event.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredictionProgressArgs.PredictionId">
+            <summary>
+            Gets the Prediction Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredictionProgressArgs.BroadcasterUserId">
+            <summary>
+            Gets the Broadcaster's User Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredictionProgressArgs.BroadcasterUsername">
+            <summary>
+            Gets the Broadcaster's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredictionProgressArgs.BroadcasterDisplayName">
+            <summary>
+            Gets the Broadcaster's Display Name.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredictionProgressArgs.Title">
+            <summary>
+            Gets the Title.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredictionProgressArgs.Outcomes">
+            <summary>
+            Gets the Outcomes.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredictionProgressArgs.StartedAt">
+            <summary>
+            Gets the string representation of Started At.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredictionProgressArgs.LocksAt">
+            <summary>
+            Gets the string representation of Locks At.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredictionProgressArgs.#ctor">
+            <summary>
+            Creates a new default instance of ChannelPredictionProgressArgs.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredictionProgressArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.ValueTuple{System.String,System.String,System.String,System.Int32,System.Int32,System.Collections.Generic.List{System.ValueTuple{System.String,System.String,System.String,System.Int32,System.Int32}}},System.String,System.String)">
+            <summary>
+            Creates a new instance of ChannelPredictionProgressArgs with the provided values.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelPredictionProgressArgs.ToString">
+            <summary>
+            Converts the object to a JSON string.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.EventSub.Events.ChannelRaidArgs">
+            <summary>
+            Provides a set of parameters related to a ChannelRaid event.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelRaidArgs.FromBroadcasterUserId">
+            <summary>
+            Gets the From Broadcaster's User Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelRaidArgs.FromBroadcasterUsername">
+            <summary>
+            Gets the From Broadcaster's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelRaidArgs.FromBroadcasterDisplayName">
+            <summary>
+            Gets the From Broadcaster's Display Name.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelRaidArgs.ToBroadcasterUserId">
+            <summary>
+            Gets the To Broadcaster's User Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelRaidArgs.ToBroadcasterUsername">
+            <summary>
+            Gets the To Broadcaster's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelRaidArgs.ToBroadcasterDisplayName">
+            <summary>
+            Gets the To Broadcaster's Display Name.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelRaidArgs.Viewers">
+            <summary>
+            Gets the Viewers.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelRaidArgs.#ctor">
+            <summary>
+            Creates a new default instance of ChannelRaidArgs.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelRaidArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Creates a new instance of ChannelRaidArgs with the provided values.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelRaidArgs.ToString">
+            <summary>
+            Converts the object to a JSON string.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscribeArgs">
+            <summary>
+            Provides a set of parameters related to a ChannelSubscribe event.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscribeArgs.UserId">
+            <summary>
+            Gets the User's Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscribeArgs.UserUsername">
+            <summary>
+            Gets the User's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscribeArgs.UserDisplayName">
+            <summary>
+            Gets the User's Display Name.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscribeArgs.BroadcasterUserId">
+            <summary>
+            Gets the Broadcaster's User Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscribeArgs.BroadcasterUsername">
+            <summary>
+            Gets the Broadcaster's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscribeArgs.BroadcasterDisplayName">
+            <summary>
+            Gets the Broadcaster's Display Name.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscribeArgs.Tier">
+            <summary>
+            Gets the Tier.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscribeArgs.IsGift">
+            <summary>
+            Gets a boolean value indicating if it Is Gift.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscribeArgs.#ctor">
+            <summary>
+            Creates a new default instance of ChannelSubscribeArgs.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscribeArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Creates a new instance of ChannelSubscribeArgs with the provided values.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscribeArgs.ToString">
+            <summary>
+            Converts the object to a JSON string.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscriptionEndArgs">
+            <summary>
+            Provides a set of parameters related to a ChannelSubscriptionEnd event.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscriptionEndArgs.UserId">
+            <summary>
+            Gets the User's Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscriptionEndArgs.UserUsername">
+            <summary>
+            Gets the User's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscriptionEndArgs.UserDisplayName">
+            <summary>
+            Gets the User's Display Name.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscriptionEndArgs.BroadcasterUserId">
+            <summary>
+            Gets the Broadcaster's User Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscriptionEndArgs.BroadcasterUsername">
+            <summary>
+            Gets the Broadcaster's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscriptionEndArgs.BroadcasterDisplayName">
+            <summary>
+            Gets the Broadcaster's Display Name.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscriptionEndArgs.Tier">
+            <summary>
+            Gets the Tier.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscriptionEndArgs.IsGift">
+            <summary>
+            Gets a boolean value indicating if it Is Gift.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscriptionEndArgs.#ctor">
+            <summary>
+            Creates a new default instance of ChannelSubscriptionEndArgs.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscriptionEndArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Creates a new instance of ChannelSubscriptionEndArgs with the provided values.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscriptionEndArgs.ToString">
+            <summary>
+            Converts the object to a JSON string.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscriptionGiftArgs">
+            <summary>
+            Provides a set of parameters related to a ChannelSubscriptionGift event.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscriptionGiftArgs.UserId">
+            <summary>
+            Gets the User's Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscriptionGiftArgs.UserUsername">
+            <summary>
+            Gets the User's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscriptionGiftArgs.UserDisplayName">
+            <summary>
+            Gets the User's Display Name.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscriptionGiftArgs.BroadcasterUserId">
+            <summary>
+            Gets the Broadcaster's User Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscriptionGiftArgs.BroadcasterUsername">
+            <summary>
+            Gets the Broadcaster's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscriptionGiftArgs.BroadcasterDisplayName">
+            <summary>
+            Gets the Broadcaster's Display Name.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscriptionGiftArgs.Total">
+            <summary>
+            Gets the Total.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscriptionGiftArgs.Tier">
+            <summary>
+            Gets the Tier.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscriptionGiftArgs.CumulativeTotal">
+            <summary>
+            Gets the Cumulative Total.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscriptionGiftArgs.IsAnonymous">
+            <summary>
+            Gets a boolean value indicating if it Is Anonymous.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscriptionGiftArgs.#ctor">
+            <summary>
+            Creates a new default instance of ChannelSubscriptionGiftArgs.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscriptionGiftArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.Int32,System.String,System.Int32,System.Boolean)">
+            <summary>
+            Creates a new instance of ChannelSubscriptionGiftArgs with the provided values.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscriptionGiftArgs.ToString">
+            <summary>
+            Converts the object to a JSON string.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscriptionMessageArgs">
+            <summary>
+            Provides a set of parameters related to a ChannelSubscriptionMessage event.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscriptionMessageArgs.UserId">
+            <summary>
+            Gets the User's Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscriptionMessageArgs.UserUsername">
+            <summary>
+            Gets the User's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscriptionMessageArgs.UserDisplayName">
+            <summary>
+            Gets the User's Display Name.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscriptionMessageArgs.BroadcasterUserId">
+            <summary>
+            Gets the Broadcaster's User Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscriptionMessageArgs.BroadcasterUsername">
+            <summary>
+            Gets the Broadcaster's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscriptionMessageArgs.BroadcasterDisplayName">
+            <summary>
+            Gets the Broadcaster's Display Name.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscriptionMessageArgs.Tier">
+            <summary>
+            Gets the Tier.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscriptionMessageArgs.Message">
+            <summary>
+            Gets the Message.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscriptionMessageArgs.CumulativeTotal">
+            <summary>
+            Gets the Cumulative Total.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscriptionMessageArgs.StreakMonths">
+            <summary>
+            Gets the Streak Months.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscriptionMessageArgs.DurationMonths">
+            <summary>
+            Gets the Duration Months.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscriptionMessageArgs.#ctor">
+            <summary>
+            Creates a new default instance of ChannelSubscriptionMessageArgs.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscriptionMessageArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.ValueTuple{System.String,System.Collections.Generic.List{System.ValueTuple{System.Int32,System.Int32,System.String}}},System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Creates a new instance of ChannelSubscriptionMessageArgs with the provided values.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelSubscriptionMessageArgs.ToString">
+            <summary>
+            Converts the object to a JSON string.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.EventSub.Events.ChannelUnbanArgs">
+            <summary>
+            Provides a set of parameters related to a ChannelUnban event.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelUnbanArgs.UserId">
+            <summary>
+            Gets the User's Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelUnbanArgs.UserUsername">
+            <summary>
+            Gets the User's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelUnbanArgs.UserDisplayName">
+            <summary>
+            Gets the User's Display Name.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelUnbanArgs.BroadcasterUserId">
+            <summary>
+            Gets the Broadcaster's User Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelUnbanArgs.BroadcasterUsername">
+            <summary>
+            Gets the Broadcaster's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelUnbanArgs.BroadcasterDisplayName">
+            <summary>
+            Gets the Broadcaster's Display Name.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelUnbanArgs.ModeratorUserId">
+            <summary>
+            Gets the Moderator's User Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelUnbanArgs.ModeratorUsername">
+            <summary>
+            Gets the Moderator's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelUnbanArgs.ModeratorDisplayName">
+            <summary>
+            Gets the Moderator's Display Name.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelUnbanArgs.#ctor">
+            <summary>
+            Creates a new default instance of ChannelUnbanArgs.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelUnbanArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Creates a new instance of ChannelUnbanArgs with the provided values.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelUnbanArgs.ToString">
+            <summary>
+            Converts the object to a JSON string.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.EventSub.Events.ChannelUpdateArgs">
+            <summary>
+            Provides a set of parameters related to a ChannelUpdate event.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelUpdateArgs.BroadcasterUserId">
+            <summary>
+            Gets the Broadcaster's User Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelUpdateArgs.BroadcasterUsername">
+            <summary>
+            Gets the Broadcaster's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelUpdateArgs.BroadcasterDisplayName">
+            <summary>
+            Gets the Broadcaster's Display Name.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelUpdateArgs.Title">
+            <summary>
+            Gets the Title.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelUpdateArgs.Language">
+            <summary>
+            Gets the Language.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelUpdateArgs.CategoryId">
+            <summary>
+            Gets the Category Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelUpdateArgs.CategoryName">
+            <summary>
+            Gets the Category Name.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ChannelUpdateArgs.IsMature">
+            <summary>
+            Gets a boolean value indicating if it Is Mature.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelUpdateArgs.#ctor">
+            <summary>
+            Creates a new default instance of ChannelUpdateArgs.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelUpdateArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Creates a new instance of ChannelUpdateArgs with the provided values.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ChannelUpdateArgs.ToString">
+            <summary>
+            Converts the object to a JSON string.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.EventSub.Events.DropEntitlementGrantArgs">
+            <summary>
+            Provides a set of parameters related to a DropEntitlementGrant event.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.DropEntitlementGrantArgs.Id">
+            <summary>
+            Gets the Id.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.EventSub.Events.DropEntitlementGrantArgs.Data">
+            <summary>
+            Gets the Data.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.DropEntitlementGrantArgs.#ctor">
+            <summary>
+            Creates a new default instance of DropEntitlementGrantArgs.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.DropEntitlementGrantArgs.#ctor(System.String,System.Collections.Generic.List{System.ValueTuple{System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.ValueTuple{System.String,System.String,System.String}}})">
+            <summary>
+            Creates a new instance of DropEntitlementGrantArgs with the provided values.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.DropEntitlementGrantArgs.ToString">
+            <summary>
+            Converts the object to a JSON string.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.EventSub.Events.ExtensionBitsTransactionCreateArgs">
+            <summary>
+            Provides a set of parameters related to a ExtensionBitsTransactionCreate event.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ExtensionBitsTransactionCreateArgs.ExtensionClientId">
+            <summary>
+            Gets the ExtensionClient Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ExtensionBitsTransactionCreateArgs.TransactionId">
+            <summary>
+            Gets the Transaction Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ExtensionBitsTransactionCreateArgs.BroadcasterUserId">
+            <summary>
+            Gets the Broadcaster's User Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ExtensionBitsTransactionCreateArgs.BroadcasterUsername">
+            <summary>
+            Gets the Broadcaster's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ExtensionBitsTransactionCreateArgs.BroadcasterDisplayName">
+            <summary>
+            Gets the Broadcaster's Display Name.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ExtensionBitsTransactionCreateArgs.UserId">
+            <summary>
+            Gets the User's Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ExtensionBitsTransactionCreateArgs.UserUsername">
+            <summary>
+            Gets the User's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.ExtensionBitsTransactionCreateArgs.UserDisplayName">
+            <summary>
+            Gets the User's Display Name.
+            </summary>
+        </member>
+        <member name="F:ProtoSim.OmniTwitch.EventSub.Events.ExtensionBitsTransactionCreateArgs.Product">
+            <summary>
+            Gets the Product.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ExtensionBitsTransactionCreateArgs.#ctor">
+            <summary>
+            Creates a new default instance of ExtensionBitsTransactionCreateArgs.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ExtensionBitsTransactionCreateArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.ValueTuple{System.String,System.Int32,System.String,System.Boolean})">
+            <summary>
+            Creates a new instance of ExtensionBitsTransactionCreateArgs with the provided values.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.ExtensionBitsTransactionCreateArgs.ToString">
+            <summary>
+            Converts the object to a JSON string.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.EventSub.Events.StreamOfflineArgs">
+            <summary>
+            Provides a set of parameters related to a StreamOffline event.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.StreamOfflineArgs.BroadcasterUserId">
+            <summary>
+            Gets the Broadcaster's User Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.StreamOfflineArgs.BroadcasterUsername">
+            <summary>
+            Gets the Broadcaster's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.StreamOfflineArgs.BroadcasterDisplayName">
+            <summary>
+            Gets the Broadcaster's Display Name.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.StreamOfflineArgs.#ctor">
+            <summary>
+            Creates a new default instance of StreamOfflineArgs.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.StreamOfflineArgs.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Creates a new instance of StreamOfflineArgs with the provided values.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.StreamOfflineArgs.ToString">
+            <summary>
+            Converts the object to a JSON string.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.EventSub.Events.StreamOnlineArgs">
+            <summary>
+            Provides a set of parameters related to a StreamOnline event.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.StreamOnlineArgs.StreamId">
+            <summary>
+            Gets the Stream Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.StreamOnlineArgs.BroadcasterUserId">
+            <summary>
+            Gets the Broadcaster's User Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.StreamOnlineArgs.BroadcasterUsername">
+            <summary>
+            Gets the Broadcaster's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.StreamOnlineArgs.BroadcasterDisplayName">
+            <summary>
+            Gets the Broadcaster's Display Name.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.StreamOnlineArgs.Type">
+            <summary>
+            Gets the Type.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.StreamOnlineArgs.StartedAt">
+            <summary>
+            Gets the string representation of Started At.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.StreamOnlineArgs.#ctor">
+            <summary>
+            Creates a new default instance of StreamOnlineArgs.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.StreamOnlineArgs.#ctor(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Creates a new instance of StreamOnlineArgs with the provided values.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.StreamOnlineArgs.ToString">
+            <summary>
+            Converts the object to a JSON string.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.EventSub.Events.UserAuthorizationGrantArgs">
+            <summary>
+            Provides a set of parameters related to a UserAuthorizationGrant event.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.UserAuthorizationGrantArgs.ClientId">
+            <summary>
+            Gets the Client Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.UserAuthorizationGrantArgs.UserId">
+            <summary>
+            Gets the User's Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.UserAuthorizationGrantArgs.UserUsername">
+            <summary>
+            Gets the User's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.UserAuthorizationGrantArgs.UserDisplayName">
+            <summary>
+            Gets the User's Display Name.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.UserAuthorizationGrantArgs.#ctor">
+            <summary>
+            Creates a new default instance of UserAuthorizationGrantArgs.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.UserAuthorizationGrantArgs.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Creates a new instance of UserAuthorizationGrantArgs with the provided values.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.UserAuthorizationGrantArgs.ToString">
+            <summary>
+            Converts the object to a JSON string.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.EventSub.Events.UserAuthorizationRevokeArgs">
+            <summary>
+            Provides a set of parameters related to a UserAuthorizationRevoke event.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.UserAuthorizationRevokeArgs.ClientId">
+            <summary>
+            Gets the Client Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.UserAuthorizationRevokeArgs.UserId">
+            <summary>
+            Gets the User's Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.UserAuthorizationRevokeArgs.UserUsername">
+            <summary>
+            Gets the User's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.UserAuthorizationRevokeArgs.UserDisplayName">
+            <summary>
+            Gets the User's Display Name.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.UserAuthorizationRevokeArgs.#ctor">
+            <summary>
+            Creates a new default instance of UserAuthorizationRevokeArgs.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.UserAuthorizationRevokeArgs.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Creates a new instance of UserAuthorizationRevokeArgs with the provided values.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.UserAuthorizationRevokeArgs.ToString">
+            <summary>
+            Converts the object to a JSON string.
+            </summary>
+        </member>
+        <member name="T:ProtoSim.OmniTwitch.EventSub.Events.UserUpdateArgs">
+            <summary>
+            Provides a set of parameters related to a UserUpdate event.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.UserUpdateArgs.UserId">
+            <summary>
+            Gets the User's Id.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.UserUpdateArgs.UserUsername">
+            <summary>
+            Gets the User's Username.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.UserUpdateArgs.UserDisplayName">
+            <summary>
+            Gets the User's Display Name.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.UserUpdateArgs.Email">
+            <summary>
+            Gets the Email.
+            </summary>
+        </member>
+        <member name="P:ProtoSim.OmniTwitch.EventSub.Events.UserUpdateArgs.Description">
+            <summary>
+            Gets the Description.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.UserUpdateArgs.#ctor">
+            <summary>
+            Creates a new default instance of UserUpdateArgs.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.UserUpdateArgs.#ctor(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Creates a new instance of UserUpdateArgs with the provided values.
+            </summary>
+        </member>
+        <member name="M:ProtoSim.OmniTwitch.EventSub.Events.UserUpdateArgs.ToString">
+            <summary>
+            Converts the object to a JSON string.
             </summary>
         </member>
     </members>

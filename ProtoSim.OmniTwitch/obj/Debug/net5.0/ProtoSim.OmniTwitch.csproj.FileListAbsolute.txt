@@ -3,7 +3,6 @@ D:\Local\NuGet\net5.0\ProtoSim.OmniTwitch.dll
 D:\Local\NuGet\net5.0\ref\ProtoSim.OmniTwitch.dll
 D:\Local\NuGet\net5.0\ProtoSim.OmniTwitch.pdb
 D:\Local\NuGet\net5.0\ProtoSim.OmniTwitch.xml
-C:\Users\roman\source\repos\ProtoSim.OmniTwitch\ProtoSim.OmniTwitch\obj\Debug\net5.0\ProtoSim.OmniTwitch.csprojAssemblyReference.cache
 C:\Users\roman\source\repos\ProtoSim.OmniTwitch\ProtoSim.OmniTwitch\obj\Debug\net5.0\ProtoSim.OmniTwitch.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\roman\source\repos\ProtoSim.OmniTwitch\ProtoSim.OmniTwitch\obj\Debug\net5.0\ProtoSim.OmniTwitch.AssemblyInfoInputs.cache
 C:\Users\roman\source\repos\ProtoSim.OmniTwitch\ProtoSim.OmniTwitch\obj\Debug\net5.0\ProtoSim.OmniTwitch.AssemblyInfo.cs
@@ -11,3 +10,4 @@ C:\Users\roman\source\repos\ProtoSim.OmniTwitch\ProtoSim.OmniTwitch\obj\Debug\ne
 C:\Users\roman\source\repos\ProtoSim.OmniTwitch\ProtoSim.OmniTwitch\obj\Debug\net5.0\ProtoSim.OmniTwitch.dll
 C:\Users\roman\source\repos\ProtoSim.OmniTwitch\ProtoSim.OmniTwitch\obj\Debug\net5.0\ref\ProtoSim.OmniTwitch.dll
 C:\Users\roman\source\repos\ProtoSim.OmniTwitch\ProtoSim.OmniTwitch\obj\Debug\net5.0\ProtoSim.OmniTwitch.pdb
+C:\Users\roman\source\repos\ProtoSim.OmniTwitch\ProtoSim.OmniTwitch\obj\Debug\net5.0\ProtoSim.OmniTwitch.csproj.AssemblyReference.cache
