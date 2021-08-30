@@ -14,7 +14,7 @@ namespace ProtoSim.OmniTwitch.EventSub.Events {
 		/// <summary>
 		/// Gets the Data.
 		/// </summary>
-		public List<(string OrganizationId, string CategoryId, string CategoryName, string CampaignId, string UserId, string UserDisplayName, string UserUsername, string EntitlementId, string BenefitId, string CreatedAt)> Data = new List<(string OrganizationId, string CategoryId, string CategoryName, string CampaignId, string UserId, string UserDisplayName, string UserUsername, string EntitlementId, string BenefitId, string CreatedAt)>();
+		public List<(string OrganizationId, string CategoryId, string CategoryName, string CampaignId, string UserId, string UserDisplayName, string UserUsername, string EntitlementId, string BenefitId, string CreatedAt)> Data = new();
 
         /// <summary>
 		/// Creates a new default instance of DropEntitlementGrantArgs.

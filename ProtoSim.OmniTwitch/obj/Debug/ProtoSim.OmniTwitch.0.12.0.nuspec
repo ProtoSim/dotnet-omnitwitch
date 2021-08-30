@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>ProtoSim.OmniTwitch</id>
-    <version>0.11.0</version>
+    <version>0.12.0</version>
     <authors>Sebastian Romanet</authors>
     <license type="file">LICENSE.txt</license>
     <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
