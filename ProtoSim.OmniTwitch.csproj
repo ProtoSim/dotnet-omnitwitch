@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <SignAssembly>False</SignAssembly>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>12.0.0.15</Version>
+    <Authors>Sebastian Romanet</Authors>
+    <Company>ProtoSim</Company>
+    <Description>A .NET 5.0 class library that provides communication with Twitch via their various APIs and services</Description>
+    <PackageProjectUrl>https://github.com/ProtoSim/dotnet-omnitwitch</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/ProtoSim/dotnet-omnitwitch</RepositoryUrl>
+    <PackageLicenseFile>C:\Users\roman\source\repos\ProtoSim\ProtoSim.OmniTwitch\LICENSE.txt</PackageLicenseFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="WebSocketSharp-netstandard" Version="1.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
